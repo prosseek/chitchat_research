@@ -1,0 +1,39 @@
+1:18(18) -> (g(0):c(18))
+2:16(34) -> (g(16):c(0))
+3:14(48) -> (g(14):c(0))
+4:12(60) -> (g(12):c(0))
+5:10(70) -> (g(10):c(0))
+6:8(78) -> (g(8):c(0))
+7:6(84) -> (g(6):c(0))
+8:4(88) -> (g(4):c(0))
+9:2(90) -> (g(2):c(0))
+Accuracy: total
+STEP: 1 -> AVG 28.00%
+STEP: 2 -> AVG 44.00%
+STEP: 3 -> AVG 58.00%
+STEP: 4 -> AVG 70.00%
+STEP: 5 -> AVG 80.00%
+STEP: 6 -> AVG 88.00%
+STEP: 7 -> AVG 94.00%
+STEP: 8 -> AVG 98.00%
+STEP: 9 -> AVG 100.00%
+Accuracy: agg
+STEP: 1 -> AVG 28.00%
+STEP: 2 -> AVG 44.00%
+STEP: 3 -> AVG 58.00%
+STEP: 4 -> AVG 70.00%
+STEP: 5 -> AVG 80.00%
+STEP: 6 -> AVG 88.00%
+STEP: 7 -> AVG 94.00%
+STEP: 8 -> AVG 98.00%
+STEP: 9 -> AVG 100.00%
+Accuracy: single
+STEP: 1 -> AVG 28.00%
+STEP: 2 -> AVG 44.00%
+STEP: 3 -> AVG 58.00%
+STEP: 4 -> AVG 70.00%
+STEP: 5 -> AVG 80.00%
+STEP: 6 -> AVG 88.00%
+STEP: 7 -> AVG 94.00%
+STEP: 8 -> AVG 98.00%
+STEP: 9 -> AVG 100.00%

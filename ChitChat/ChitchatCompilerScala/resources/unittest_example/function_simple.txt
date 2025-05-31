@@ -1,0 +1,3 @@
+function bool priceMatch(produceName, price) = {
+    produceName == "apple" && price >= 0 && price <= 1000
+}

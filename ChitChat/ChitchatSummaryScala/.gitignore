@@ -1,0 +1,23 @@
+# sbt specific
+.cache/
+.history/
+.lib/
+
+target/*
+project/target/*
+out/*
+doc/api/*
+
+# Python
+.pyc
+
+# idea
+
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+
+*.class
+*.log
+*.cache
+
+.DS_Store

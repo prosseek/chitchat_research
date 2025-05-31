@@ -1,0 +1,6 @@
+latitude -> (30, 25, 38, 2)
+longitude -> (-17, 47, 11, 0)
+message -> What's your problem?
+time -> (11, 21)
+date -> (2015, 01, 01)
+age -> 12

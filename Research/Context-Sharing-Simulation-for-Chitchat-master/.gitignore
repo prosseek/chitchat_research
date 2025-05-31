@@ -1,0 +1,33 @@
+# Ignore IntelliJ IDE
+out/
+project/
+target/
+/.idea/workspace.xml
+.DS_Store
+*test_result.*
+
+*.class
+result*_l.json
+result*_b.json
+result*_j.json
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+one_simulator/reports/
+
+contextProcessor/target/
+contextProcessor/project/
+context/target/
+context/project/
+contextSummary/target/
+contextSummary/project/
+
+results/
+
+gnuplot.txt
+results.json
+runme.sh
+data.txt
+*.png
+experiment/jsonContextsEvaluation

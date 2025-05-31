@@ -1,0 +1,87 @@
+1:98(98) -> (g(0):c(98))
+2:68(166) -> (g(68):c(0))
+3:66(232) -> (g(66):c(0))
+4:64(296) -> (g(64):c(0))
+5:62(358) -> (g(62):c(0))
+6:60(418) -> (g(60):c(0))
+7:58(476) -> (g(58):c(0))
+8:56(532) -> (g(56):c(0))
+9:54(586) -> (g(54):c(0))
+10:52(638) -> (g(52):c(0))
+11:50(688) -> (g(50):c(0))
+12:48(736) -> (g(48):c(0))
+13:41(777) -> (g(41):c(0))
+14:36(813) -> (g(36):c(0))
+15:31(844) -> (g(31):c(0))
+16:24(868) -> (g(24):c(0))
+17:17(885) -> (g(17):c(0))
+18:11(896) -> (g(11):c(0))
+19:6(902) -> (g(6):c(0))
+20:4(906) -> (g(4):c(0))
+21:2(908) -> (g(2):c(0))
+Accuracy: total
+STEP: 1 -> AVG  5.92%
+STEP: 2 -> AVG 14.32%
+STEP: 3 -> AVG 25.12%
+STEP: 4 -> AVG 33.52%
+STEP: 5 -> AVG 42.48%
+STEP: 6 -> AVG 52.48%
+STEP: 7 -> AVG 61.12%
+STEP: 8 -> AVG 67.52%
+STEP: 9 -> AVG 73.20%
+STEP: 10 -> AVG 79.28%
+STEP: 11 -> AVG 84.80%
+STEP: 12 -> AVG 88.88%
+STEP: 13 -> AVG 91.92%
+STEP: 14 -> AVG 94.48%
+STEP: 15 -> AVG 96.56%
+STEP: 16 -> AVG 98.00%
+STEP: 17 -> AVG 98.96%
+STEP: 18 -> AVG 99.52%
+STEP: 19 -> AVG 99.76%
+STEP: 20 -> AVG 99.92%
+STEP: 21 -> AVG 100.00%
+Accuracy: agg
+STEP: 1 -> AVG  5.92%
+STEP: 2 -> AVG 14.32%
+STEP: 3 -> AVG 25.12%
+STEP: 4 -> AVG 33.52%
+STEP: 5 -> AVG 42.48%
+STEP: 6 -> AVG 52.48%
+STEP: 7 -> AVG 61.12%
+STEP: 8 -> AVG 67.52%
+STEP: 9 -> AVG 73.20%
+STEP: 10 -> AVG 79.28%
+STEP: 11 -> AVG 84.80%
+STEP: 12 -> AVG 88.88%
+STEP: 13 -> AVG 91.92%
+STEP: 14 -> AVG 94.48%
+STEP: 15 -> AVG 96.56%
+STEP: 16 -> AVG 98.00%
+STEP: 17 -> AVG 98.96%
+STEP: 18 -> AVG 99.52%
+STEP: 19 -> AVG 99.76%
+STEP: 20 -> AVG 99.92%
+STEP: 21 -> AVG 100.00%
+Accuracy: single
+STEP: 1 -> AVG  5.92%
+STEP: 2 -> AVG  6.56%
+STEP: 3 -> AVG  7.12%
+STEP: 4 -> AVG  7.60%
+STEP: 5 -> AVG  8.00%
+STEP: 6 -> AVG  8.40%
+STEP: 7 -> AVG  8.80%
+STEP: 8 -> AVG  9.32%
+STEP: 9 -> AVG  9.84%
+STEP: 10 -> AVG 10.32%
+STEP: 11 -> AVG 10.80%
+STEP: 12 -> AVG 11.72%
+STEP: 13 -> AVG 12.64%
+STEP: 14 -> AVG 13.52%
+STEP: 15 -> AVG 14.36%
+STEP: 16 -> AVG 15.12%
+STEP: 17 -> AVG 15.68%
+STEP: 18 -> AVG 16.04%
+STEP: 19 -> AVG 16.28%
+STEP: 20 -> AVG 16.44%
+STEP: 21 -> AVG 16.52%

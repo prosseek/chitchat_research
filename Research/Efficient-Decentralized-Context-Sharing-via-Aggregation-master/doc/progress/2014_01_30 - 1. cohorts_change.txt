@@ -1,0 +1,120 @@
+## Cohort Change
+
+### What
+
+Running massive simulation, I have this count <http://pr.prosseek.com/blog/2014/01/27/aggregation-simulation-data-format/>
+
+    10.0,9.6,0.4,0.2 <- accuracy
+    3.0 <- speed
+    66.0,94.0 <- packet count
+    None
+
+The 9.6 + 0.4 = 10.0 means that the accuracy is 100%, 96% is from single contexts and 4% is from aggregated (cohorts) context. 
+
+However, this 0.4 means nothing, and can be retrieved from 10.0 - 9.6. This number should be calculated from **not 0** value. 
+
+### Why
+
+The `def getAccuracy(self):` code:
+
+![number_of_cohorts](pic/pic1.png =400x)
+
+We store the number of cohorts for each node at each time step. We also know the number of pcCount.
+
+![get final accuracy](pic/pic2.png =400x)
+
+The `dict_avg` computes the average, I need to change this.
+
+### How
+
+![dict_avg](pic/pic3.png =400x)
+
+The average function blindingly count and compute, it should be modified to exclude the zero values.
+
+	[[0, 0], [2, 4], [0, 0], [0, 0], 
+	[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
+	
+(Don't forget this is the last time stamped results)
+As is shown, out of 10 nodes, only node 2 has cohorts. So, the average should be [2,4] not [0.2, 0.4].
+
+[2,4] says that there are 2 cohorts and the total count is 4. 
+
+### Tricks in Python
+
+How to filter out list with Python?
+
+	>>> a = [1,2,3,4,5]
+	>>> filter(lambda x: x != 0, a)
+	[1, 2, 3, 4, 5]
+	
+So, I have the code change
+
+    def dict_avg(self, dict):
+        values = dict.values()
+        #print values
+        if type(values[0]) is list:
+            #print values
+            number_of_cohorts = filter(lambda x: x != 0, [i[0] for i in values])
+            pcCount = filter(lambda x: x != 0, [i[1] for i in values])
+            return (sum(number_of_cohorts)*1.0/len(number_of_cohorts), sum(pcCount)*1.0/len(pcCount))
+        else:
+            return sum(values)*1.0/len(values)
+            
+And this is the new result:
+
+	10.0,9.6,4.0,2.0 <-- 4 and 2 (not 0.4 and 0.2)
+	3.0
+	66.0,94.0
+	None     
+    
+## Examles
+
+### Mesh example for 10 nodes
+
+For `_mesh10_5_100_0.4_80.txt`. 
+What it says is that from node 2 to node 10, there are only 1 cohorts (in average) that contributes the accuracy. 
+
+`(6*6 + 8*3)/9 = 6.6667` 
+
+![mesh10*](./pic/g1.png =400x)
+
+	[[0, 0], [1, 6], [1, 8], [1, 6], [1, 6], 
+	 [1, 6], [1, 6], [1, 8], [1, 6], [1, 8]]
+
+
+	10.0,4.0,6.66666666667,1.0
+	3.0
+	26.0,31.0
+
+This is singles only case:
+	
+	10.0,10.0,0.0,0.0
+	3.0
+	166.0,0.0
+
+### Tree example for 10 nodes
+
+![mesh10*](./pic/g2.png =400x)
+
+	[[0, 0], [1, 8], [1, 8], [1, 8], [1, 8], 
+	 [1, 8], [1, 8], [1, 8], [1, 8], [1, 8]]
+	
+	10.0,2.8,8.0,1.0
+	2.0
+	18.0,9.0
+	
+Compare this with Singles only case:
+
+	[[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], 
+	 [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
+
+	10.0,10.0,0.0,0.0
+	2.0
+	90.0,0.0
+
+Don't forget the we know the count in tree case `(N*(N-1))`
+
+## Github
+
+* `fixed the wrong cohorts calculation`
+* `bug fix in cohorts calculation`

@@ -1,0 +1,1 @@
++type max10 extends String(maxlength(10))

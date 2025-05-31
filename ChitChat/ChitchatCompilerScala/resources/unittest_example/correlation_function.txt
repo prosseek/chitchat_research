@@ -1,0 +1,4 @@
+correlation producePrice = (priceMatch(produceName, price))
+function bool priceMatch(produceName, price) = {
+ produceName == "apple" && price <= 1000 && price >= 0
+}

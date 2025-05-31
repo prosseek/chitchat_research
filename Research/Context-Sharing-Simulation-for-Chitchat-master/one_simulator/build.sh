@@ -1,0 +1,1 @@
+javac -extdirs lib/ -cp .:lib applications/PingApplication.java

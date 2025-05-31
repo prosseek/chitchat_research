@@ -1,0 +1,1 @@
+require('chitchat/interpreter')

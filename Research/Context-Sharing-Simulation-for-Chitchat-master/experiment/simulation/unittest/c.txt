@@ -1,0 +1,116 @@
+# This configuration file adds Ping application for all the nodes and 
+# a report module that counts the number of pings & pongs sent & received
+
+##################### CONTROL FOR SIMULATION 
+
+btInterface.transmitRange = 50
+# 43200s == 12h
+# How long time to move hosts in the world before real simulation
+MovementModel.warmup = 10
+Scenario.endTime = 10000
+ContextSummary.summaryType = b
+
+##################### SIMULATION CONTROL
+
+Scenario.name = context_sharing_simple
+Scenario.simulateConnections = true
+Scenario.updateInterval = 0.01
+
+# Define new application
+contextSharingApp.type = ContextSharingApplication
+
+# Set Ping app for all nodes
+Group.nrofApplications = 1
+Group.application1 = contextSharingApp
+
+# Add report for Context Sharing App
+Report.nrofReports = 2
+Report.report2 = ContextSharingAppReporter
+
+##################### DIRECTORY & STRATEGY
+# ContextSummary storage directory
+ContextSummary.directory = experiment/simulation/open_air_book_fair
+
+# Sharing strategy
+ContextSummary.strategy = smcho.SimpleShareLogic
+
+# Capabilities setup
+
+##################### 
+##################### GROUP <----
+##################### 
+
+# Scenario groups
+Scenario.nrofHostGroups = 7
+
+##################### VISITOR
+
+Group1.groupID = v
+Group1.nrofHosts = 1
+Group1.speed = 1.2, 1.5
+
+##################### SIMILAR WITH VISITOR
+
+Group2.groupID = s
+Group2.nrofHosts = 40
+Group2.speed = 1.2, 1.5
+
+##################### PEOPLE
+
+Group3.groupID = p
+Group3.nrofHosts = 40
+Group3.speed = 1.2, 1.5
+
+##################### MARKETS 1 
+Group4.worldSize = 5000, 5000
+Group4.groupID = ma
+Group4.nrofHosts = 1
+Group4.movementModel = StationaryMovement
+Group4.nodeLocation = [1900, 2300]
+
+##################### MARKETS 2
+
+Group5.worldSize = 5000, 5000
+Group5.groupID = mb
+Group5.nrofHosts = 1
+Group5.movementModel = StationaryMovement
+Group5.nodeLocation = [1910, 2300]
+
+##################### MARKETS 3
+
+Group6.worldSize = 5000, 5000
+Group6.groupID = mc
+Group6.nrofHosts = 1
+Group6.movementModel = StationaryMovement
+Group6.nodeLocation = [1920, 2300]
+
+##################### MARKETS 4
+
+Group7.worldSize = 5000, 5000
+Group7.groupID = md
+Group7.nrofHosts = 1
+Group7.movementModel = StationaryMovement
+Group7.nodeLocation = [1930, 2300]
+
+##################### MOVEMENT MODEL
+
+## Movement model settings
+# seed for movement models' pseudo random number generator (default = 0)
+MovementModel.rngSeed = 1
+# World's size for Movement Models without implicit size (width, height; meters)
+MovementModel.worldSize = 7500, 8500
+
+
+##################### MAP
+
+## Map based movement -movement model specific settings
+MapBasedMovement.nrofMapFiles = 1
+
+MapBasedMovement.mapFile1 = data/Manhattan/roads.wkt
+# MapBasedMovement.mapFile1 = data/tram3.wkt
+# MapBasedMovement.mapFile2 = data/tram4.wkt
+# MapBasedMovement.mapFile3 = data/tram10.wkt
+# MapBasedMovement.mapFile4 = data/main_roads.wkt
+
+
+

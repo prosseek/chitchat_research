@@ -1,0 +1,568 @@
+Simulation step [1]
+---------------------------
+* host [0] *
+(4) received Contexts from (0): [(id(0)11)]
+(5) received Contexts from (0): [(id(0)11)]
+(6) received Contexts from (0): [(id(0)11)]
+(7) received Contexts from (0): [(id(0)11)]
+(8) received Contexts from (0): [(id(0)11)]
+(9) received Contexts from (0): [(id(0)11)]
+* host [1] *
+(2) received Contexts from (1): [(id(1)11)]
+(3) received Contexts from (1): [(id(1)11)]
+(5) received Contexts from (1): [(id(1)11)]
+(6) received Contexts from (1): [(id(1)11)]
+(8) received Contexts from (1): [(id(1)11)]
+(9) received Contexts from (1): [(id(1)11)]
+* host [2] *
+(8) received Contexts from (2): [(id(2)11)]
+(1) received Contexts from (2): [(id(2)11)]
+(3) received Contexts from (2): [(id(2)11)]
+(4) received Contexts from (2): [(id(2)11)]
+(6) received Contexts from (2): [(id(2)11)]
+* host [3] *
+(8) received Contexts from (3): [(id(3)11)]
+(1) received Contexts from (3): [(id(3)11)]
+(2) received Contexts from (3): [(id(3)11)]
+(6) received Contexts from (3): [(id(3)11)]
+(9) received Contexts from (3): [(id(3)11)]
+* host [4] *
+(0) received Contexts from (4): [(id(4)11)]
+(8) received Contexts from (4): [(id(4)11)]
+(2) received Contexts from (4): [(id(4)11)]
+(5) received Contexts from (4): [(id(4)11)]
+(7) received Contexts from (4): [(id(4)11)]
+* host [5] *
+(0) received Contexts from (5): [(id(5)11)]
+(1) received Contexts from (5): [(id(5)11)]
+(4) received Contexts from (5): [(id(5)11)]
+(9) received Contexts from (5): [(id(5)11)]
+(7) received Contexts from (5): [(id(5)11)]
+* host [6] *
+(0) received Contexts from (6): [(id(6)11)]
+(1) received Contexts from (6): [(id(6)11)]
+(2) received Contexts from (6): [(id(6)11)]
+(3) received Contexts from (6): [(id(6)11)]
+(9) received Contexts from (6): [(id(6)11)]
+* host [7] *
+(0) received Contexts from (7): [(id(7)11)]
+(4) received Contexts from (7): [(id(7)11)]
+(5) received Contexts from (7): [(id(7)11)]
+* host [8] *
+(0) received Contexts from (8): [(id(8)11)]
+(1) received Contexts from (8): [(id(8)11)]
+(2) received Contexts from (8): [(id(8)11)]
+(3) received Contexts from (8): [(id(8)11)]
+(4) received Contexts from (8): [(id(8)11)]
+* host [9] *
+(0) received Contexts from (9): [(id(9)11)]
+(1) received Contexts from (9): [(id(9)11)]
+(3) received Contexts from (9): [(id(9)11)]
+(5) received Contexts from (9): [(id(9)11)]
+(6) received Contexts from (9): [(id(9)11)]
+**** Host 0 **************************
+DB:Single:[(id(0)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {4:[(id(4)11)]|5:[(id(5)11)]|6:[(id(6)11)]|7:[(id(7)11)]|8:[(id(8)11)]|9:[(id(9)11)]}
+outputBuffer - Buffer:Aggr:<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Singles:[(id(0)11)]
+outputDictionary - {4:[<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|5:[<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|6:[<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|7:[<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|8:[<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|9:[<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 1 **************************
+DB:Single:[(id(1)11)(id(2)11)(id(3)11)(id(5)11)(id(6)11)(id(8)11)(id(9)11)]
+inputDictionary - {2:[(id(2)11)]|3:[(id(3)11)]|5:[(id(5)11)]|6:[(id(6)11)]|8:[(id(8)11)]|9:[(id(9)11)]}
+outputBuffer - Buffer:Aggr:<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Singles:[(id(1)11)]
+outputDictionary - {2:[<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|3:[<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|5:[<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|6:[<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|8:[<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|9:[<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 2 **************************
+DB:Single:[(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(6)11)(id(8)11)]
+inputDictionary - {8:[(id(8)11)]|1:[(id(1)11)]|3:[(id(3)11)]|4:[(id(4)11)]|6:[(id(6)11)]}
+outputBuffer - Buffer:Aggr:<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>
+oldOutputBuffer - Buffer:Singles:[(id(2)11)]
+outputDictionary - {8:[<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]|1:[<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]|3:[<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]|4:[<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]|6:[<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]}
+***************************************
+
+**** Host 3 **************************
+DB:Single:[(id(1)11)(id(2)11)(id(3)11)(id(6)11)(id(8)11)(id(9)11)]
+inputDictionary - {8:[(id(8)11)]|1:[(id(1)11)]|2:[(id(2)11)]|6:[(id(6)11)]|9:[(id(9)11)]}
+outputBuffer - Buffer:Aggr:<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Singles:[(id(3)11)]
+outputDictionary - {8:[<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]|1:[<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]|2:[<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]|6:[<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]|9:[<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 4 **************************
+DB:Single:[(id(0)11)(id(2)11)(id(4)11)(id(5)11)(id(7)11)(id(8)11)]
+inputDictionary - {0:[(id(0)11)]|8:[(id(8)11)]|2:[(id(2)11)]|5:[(id(5)11)]|7:[(id(7)11)]}
+outputBuffer - Buffer:Aggr:<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>
+oldOutputBuffer - Buffer:Singles:[(id(4)11)]
+outputDictionary - {0:[<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]|8:[<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]|2:[<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]|5:[<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]|7:[<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]}
+***************************************
+
+**** Host 5 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(4)11)(id(5)11)(id(7)11)(id(9)11)]
+inputDictionary - {0:[(id(0)11)]|1:[(id(1)11)]|4:[(id(4)11)]|9:[(id(9)11)]|7:[(id(7)11)]}
+outputBuffer - Buffer:Aggr:<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>
+oldOutputBuffer - Buffer:Singles:[(id(5)11)]
+outputDictionary - {0:[<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]|1:[<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]|4:[<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]|9:[<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]|7:[<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]}
+***************************************
+
+**** Host 6 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(6)11)(id(9)11)]
+inputDictionary - {0:[(id(0)11)]|1:[(id(1)11)]|2:[(id(2)11)]|3:[(id(3)11)]|9:[(id(9)11)]}
+outputBuffer - Buffer:Aggr:<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>
+oldOutputBuffer - Buffer:Singles:[(id(6)11)]
+outputDictionary - {0:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]|1:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]|2:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]|3:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]|9:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]}
+***************************************
+
+**** Host 7 **************************
+DB:Single:[(id(0)11)(id(4)11)(id(5)11)(id(7)11)]
+inputDictionary - {0:[(id(0)11)]|4:[(id(4)11)]|5:[(id(5)11)]}
+outputBuffer - Buffer:Aggr:<G4|id(0)11|id(4)11|id(5)11|id(7)11|>
+oldOutputBuffer - Buffer:Singles:[(id(7)11)]
+outputDictionary - {0:[<G4|id(0)11|id(4)11|id(5)11|id(7)11|>]|4:[<G4|id(0)11|id(4)11|id(5)11|id(7)11|>]|5:[<G4|id(0)11|id(4)11|id(5)11|id(7)11|>]}
+***************************************
+
+**** Host 8 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(8)11)]
+inputDictionary - {0:[(id(0)11)]|1:[(id(1)11)]|2:[(id(2)11)]|3:[(id(3)11)]|4:[(id(4)11)]}
+outputBuffer - Buffer:Aggr:<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>
+oldOutputBuffer - Buffer:Singles:[(id(8)11)]
+outputDictionary - {0:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]|1:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]|2:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]|3:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]|4:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]}
+***************************************
+
+**** Host 9 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(3)11)(id(5)11)(id(6)11)(id(9)11)]
+inputDictionary - {0:[(id(0)11)]|1:[(id(1)11)]|3:[(id(3)11)]|5:[(id(5)11)]|6:[(id(6)11)]}
+outputBuffer - Buffer:Aggr:<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>
+oldOutputBuffer - Buffer:Singles:[(id(9)11)]
+outputDictionary - {0:[<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]|1:[<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]|3:[<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]|5:[<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]|6:[<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]}
+***************************************
+
+
+
+Simulation step [2]
+---------------------------
+* host [0] *
+(4) received Contexts from (0): [<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(5) received Contexts from (0): [<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(6) received Contexts from (0): [<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(7) received Contexts from (0): [<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(8) received Contexts from (0): [<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(9) received Contexts from (0): [<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+* host [1] *
+(2) received Contexts from (1): [<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]
+(3) received Contexts from (1): [<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]
+(5) received Contexts from (1): [<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]
+(6) received Contexts from (1): [<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]
+(8) received Contexts from (1): [<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]
+(9) received Contexts from (1): [<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]
+* host [2] *
+(8) received Contexts from (2): [<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]
+(1) received Contexts from (2): [<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]
+(3) received Contexts from (2): [<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]
+(4) received Contexts from (2): [<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]
+(6) received Contexts from (2): [<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]
+* host [3] *
+(8) received Contexts from (3): [<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]
+(1) received Contexts from (3): [<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]
+(2) received Contexts from (3): [<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]
+(6) received Contexts from (3): [<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]
+(9) received Contexts from (3): [<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]
+* host [4] *
+(0) received Contexts from (4): [<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]
+(8) received Contexts from (4): [<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]
+(2) received Contexts from (4): [<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]
+(5) received Contexts from (4): [<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]
+(7) received Contexts from (4): [<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]
+* host [5] *
+(0) received Contexts from (5): [<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]
+(1) received Contexts from (5): [<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]
+(4) received Contexts from (5): [<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]
+(9) received Contexts from (5): [<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]
+(7) received Contexts from (5): [<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]
+* host [6] *
+(0) received Contexts from (6): [<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]
+(1) received Contexts from (6): [<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]
+(2) received Contexts from (6): [<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]
+(3) received Contexts from (6): [<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]
+(9) received Contexts from (6): [<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]
+* host [7] *
+(0) received Contexts from (7): [<G4|id(0)11|id(4)11|id(5)11|id(7)11|>]
+(4) received Contexts from (7): [<G4|id(0)11|id(4)11|id(5)11|id(7)11|>]
+(5) received Contexts from (7): [<G4|id(0)11|id(4)11|id(5)11|id(7)11|>]
+* host [8] *
+(0) received Contexts from (8): [<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]
+(1) received Contexts from (8): [<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]
+(2) received Contexts from (8): [<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]
+(3) received Contexts from (8): [<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]
+(4) received Contexts from (8): [<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]
+* host [9] *
+(0) received Contexts from (9): [<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]
+(1) received Contexts from (9): [<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]
+(3) received Contexts from (9): [<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]
+(5) received Contexts from (9): [<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]
+(6) received Contexts from (9): [<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]
+**** Host 0 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {4:[<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]|5:[<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]|6:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]|7:[<G4|id(0)11|id(4)11|id(5)11|id(7)11|>]|8:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]|9:[<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - {4:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|5:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|6:[]|7:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|8:[]|9:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 1 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {2:[<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]|3:[<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]|5:[<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]|6:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]|8:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]|9:[<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>
+outputDictionary - {2:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|3:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|5:[]|6:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|8:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|9:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 2 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {8:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]|1:[<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|3:[<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]|4:[<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]|6:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>
+outputDictionary - {8:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|1:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|3:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|4:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|6:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 3 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(8)11)(id(9)11)]
+inputDictionary - {8:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]|1:[<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|2:[<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]|6:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]|9:[<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>
+outputDictionary - {8:[<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|1:[<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|2:[<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|6:[<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|9:[<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 4 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]NPrime:[<G2|id(1)11|id(3)11|>]
+inputDictionary - {0:[<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|8:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>]|2:[<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]|5:[<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]|7:[<G4|id(0)11|id(4)11|id(5)11|id(7)11|>]}
+outputBuffer - Buffer:Aggr:<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>
+outputDictionary - {0:[<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|8:[<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|2:[<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|5:[<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|7:[<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 5 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(4)11)(id(5)11)(id(7)11)(id(9)11)]NPrime:[<G2|id(3)11|id(6)11|><G2|id(6)11|id(8)11|><G2|id(2)11|id(8)11|>]
+inputDictionary - {0:[<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|1:[<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|4:[<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]|9:[<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]|7:[<G4|id(0)11|id(4)11|id(5)11|id(7)11|>]}
+outputBuffer - Buffer:Aggr:<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 6 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {0:[<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|1:[<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|2:[<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]|3:[<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]|9:[<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>
+outputDictionary - {0:[]|1:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|2:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|3:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|9:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 7 **************************
+DB:Single:[(id(0)11)(id(4)11)(id(5)11)(id(7)11)]NPrime:[<G2|id(1)11|id(9)11|><G2|id(2)11|id(8)11|><G3|id(6)11|id(8)11|id(9)11|>]
+inputDictionary - {0:[<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|4:[<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]|5:[<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G4|id(0)11|id(4)11|id(5)11|id(7)11|>
+oldOutputBuffer - Buffer:Aggr:<G4|id(0)11|id(4)11|id(5)11|id(7)11|>
+outputDictionary - 
+***************************************
+
+**** Host 8 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {0:[<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|1:[<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|2:[<G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|>]|3:[<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]|4:[<G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|>
+outputDictionary - {0:[]|1:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|2:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|3:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|4:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 9 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(5)11)(id(6)11)(id(8)11)(id(9)11)]Prime:[<G2|id(4)11|id(7)11|>]
+inputDictionary - {0:[<G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|1:[<G7|id(1)11|id(2)11|id(3)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|3:[<G6|id(1)11|id(2)11|id(3)11|id(6)11|id(8)11|id(9)11|>]|5:[<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>]|6:[<G6|id(0)11|id(1)11|id(2)11|id(3)11|id(6)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G6|id(0)11|id(1)11|id(3)11|id(5)11|id(6)11|id(9)11|>
+outputDictionary - {0:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|1:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|3:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|5:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|6:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+***************************************
+
+
+
+Simulation step [3]
+---------------------------
+* host [0] *
+(4) received Contexts from (0): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(5) received Contexts from (0): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+has nothing to send to :  6
+(7) received Contexts from (0): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+has nothing to send to :  8
+(9) received Contexts from (0): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+* host [1] *
+(2) received Contexts from (1): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(3) received Contexts from (1): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+has nothing to send to :  5
+(6) received Contexts from (1): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(8) received Contexts from (1): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(9) received Contexts from (1): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+* host [2] *
+(8) received Contexts from (2): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(1) received Contexts from (2): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(3) received Contexts from (2): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(4) received Contexts from (2): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(6) received Contexts from (2): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+* host [3] *
+(8) received Contexts from (3): [<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]
+(1) received Contexts from (3): [<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]
+(2) received Contexts from (3): [<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]
+(6) received Contexts from (3): [<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]
+(9) received Contexts from (3): [<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]
+* host [4] *
+(0) received Contexts from (4): [<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(8) received Contexts from (4): [<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(2) received Contexts from (4): [<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(5) received Contexts from (4): [<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(7) received Contexts from (4): [<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+* host [5] *
+* host [6] *
+has nothing to send to :  0
+(1) received Contexts from (6): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(2) received Contexts from (6): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(3) received Contexts from (6): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(9) received Contexts from (6): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+* host [7] *
+* host [8] *
+has nothing to send to :  0
+(1) received Contexts from (8): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(2) received Contexts from (8): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(3) received Contexts from (8): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(4) received Contexts from (8): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+* host [9] *
+(0) received Contexts from (9): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(1) received Contexts from (9): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(3) received Contexts from (9): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(5) received Contexts from (9): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(6) received Contexts from (9): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+**** Host 0 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {9:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|4:[<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 1 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {8:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|9:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|2:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|3:[<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|6:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 2 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {8:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|1:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|3:[<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|4:[<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|6:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 3 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {8:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|1:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|2:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|6:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|9:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>
+outputDictionary - {8:[]|1:[]|2:[]|6:[]|9:[]}
+***************************************
+
+**** Host 4 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {0:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|8:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|2:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - {0:[]|8:[]|2:[]|5:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|7:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 5 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(3)11)(id(4)11)(id(5)11)(id(7)11)(id(9)11)]Prime:[<G3|id(2)11|id(6)11|id(8)11|>]
+inputDictionary - {0:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|9:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|4:[<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|>
+outputDictionary - {0:[]|1:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|4:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|9:[]|7:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 6 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {1:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|2:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|3:[<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|9:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 7 **************************
+DB:Single:[(id(0)11)(id(3)11)(id(4)11)(id(5)11)(id(7)11)]Prime:[<G5|id(1)11|id(2)11|id(6)11|id(8)11|id(9)11|>]
+inputDictionary - {0:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|4:[<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G4|id(0)11|id(4)11|id(5)11|id(7)11|>
+outputDictionary - {0:[]|4:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|5:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+***************************************
+
+**** Host 8 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {1:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|2:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|3:[<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|4:[<G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 9 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {0:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|1:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|3:[<G9|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(8)11|id(9)11|>]|6:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+
+
+Simulation step [4]
+---------------------------
+* host [0] *
+* host [1] *
+* host [2] *
+* host [3] *
+has nothing to send to :  8
+has nothing to send to :  1
+has nothing to send to :  2
+has nothing to send to :  6
+has nothing to send to :  9
+* host [4] *
+has nothing to send to :  0
+has nothing to send to :  8
+has nothing to send to :  2
+(5) received Contexts from (4): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(7) received Contexts from (4): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+* host [5] *
+has nothing to send to :  0
+(1) received Contexts from (5): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(4) received Contexts from (5): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+has nothing to send to :  9
+(7) received Contexts from (5): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+* host [6] *
+* host [7] *
+has nothing to send to :  0
+(4) received Contexts from (7): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+(5) received Contexts from (7): [<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]
+* host [8] *
+* host [9] *
+**** Host 0 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - 
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 1 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {5:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 2 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - 
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 3 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - 
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 4 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - {5:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|7:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 5 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(3)11)(id(4)11)(id(5)11)(id(7)11)(id(9)11)]Prime:[<G3|id(2)11|id(6)11|id(8)11|>]
+inputDictionary - {4:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|7:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 6 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - 
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 7 **************************
+DB:Single:[(id(0)11)(id(3)11)(id(4)11)(id(5)11)(id(7)11)]Prime:[<G5|id(1)11|id(2)11|id(6)11|id(8)11|id(9)11|>]
+inputDictionary - {4:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]|5:[<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>]}
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 8 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - 
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+**** Host 9 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(3)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]
+inputDictionary - 
+outputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+oldOutputBuffer - Buffer:Aggr:<G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|>
+outputDictionary - 
+***************************************
+
+
+
+Simulation step [5]
+---------------------------
+* host [0] *
+* host [1] *
+* host [2] *
+* host [3] *
+* host [4] *
+* host [5] *
+* host [6] *
+* host [7] *
+* host [8] *
+* host [9] *
+STOP SIMULATION
+Size: based on the steps
+1:50(50) -> (g(0):c(50))
+2:50(100) -> (g(50):c(0))
+3:37(137) -> (g(37):c(0))
+4:7(144) -> (g(7):c(0))
+
+Accuracy: agg
+STEP: 1 -> AVG 60.00%
+STEP: 2 -> AVG 88.00%
+STEP: 3 -> AVG 100.00%
+STEP: 4 -> AVG 100.00%
+Accuracy: single
+STEP: 1 -> AVG 60.00%
+STEP: 2 -> AVG 86.00%
+STEP: 3 -> AVG 92.00%
+STEP: 4 -> AVG 92.00%
+
+copy output
+Program exited with code #0 after 1.79 seconds.

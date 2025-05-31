@@ -1,0 +1,19 @@
+1:112(112) -> (g(0):c(112))
+2:112(224) -> (g(112):c(0))
+3:112(336) -> (g(112):c(0))
+4:28(364) -> (g(28):c(0))
+Accuracy: total
+STEP: 1 -> AVG 33.00%
+STEP: 2 -> AVG 85.25%
+STEP: 3 -> AVG 104.25%
+STEP: 4 -> AVG 99.75%
+Accuracy: agg
+STEP: 1 -> AVG 33.00%
+STEP: 2 -> AVG 78.25%
+STEP: 3 -> AVG 99.50%
+STEP: 4 -> AVG 99.75%
+Accuracy: single
+STEP: 1 -> AVG 33.00%
+STEP: 2 -> AVG 36.50%
+STEP: 3 -> AVG 49.00%
+STEP: 4 -> AVG 49.25%

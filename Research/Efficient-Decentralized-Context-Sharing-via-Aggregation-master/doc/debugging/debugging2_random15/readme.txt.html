@@ -1,0 +1,134 @@
+<h1 id="graph">Graph</h1>
+<div class="figure">
+<img src="./random15.png" alt="random15" /><p class="caption"><em>random15</em></p>
+</div>
+<h1 id="symptom">Symptom</h1>
+<p>I think there is a bug, as 1 more step is needed when we have only three maximum hops.</p>
+<pre><code>Size: based on the steps
+1:92(92) -&gt; (g(0):c(92))
+2:496(588) -&gt; (g(0):c(496))
+3:384(972) -&gt; (g(0):c(384))
+4:2(974) -&gt; (g(0):c(2))
+
+Accuracy: agg
+STEP: 1 -&gt; AVG 47.56%
+STEP: 2 -&gt; AVG 98.22%
+STEP: 3 -&gt; AVG 100.00%
+STEP: 4 -&gt; AVG 100.00%
+Accuracy: single
+STEP: 1 -&gt; AVG 47.56%
+STEP: 2 -&gt; AVG 98.22%
+STEP: 3 -&gt; AVG 100.00%
+STEP: 4 -&gt; AVG 100.00%
+
+Maxhops
+[[8, 6, 0, 12], [12, 0, 7, 8], [12, 0, 7, 14], [14, 7, 0, 12]]</code></pre>
+<p>This is the case with aggregate: only 287 information.</p>
+<pre><code>Size: based on the steps
+1:92(92) -&gt; (g(0):c(92))
+2:92(184) -&gt; (g(92):c(0))
+3:89(273) -&gt; (g(89):c(0))
+4:12(285) -&gt; (g(12):c(0))
+5:2(287) -&gt; (g(2):c(0))
+
+Accuracy: agg
+STEP: 1 -&gt; AVG 47.56%
+STEP: 2 -&gt; AVG 72.44%
+STEP: 3 -&gt; AVG 96.00%
+STEP: 4 -&gt; AVG 100.00%
+STEP: 5 -&gt; AVG 100.00%
+Accuracy: single
+STEP: 1 -&gt; AVG 47.56%
+STEP: 2 -&gt; AVG 64.00%
+STEP: 3 -&gt; AVG 71.56%
+STEP: 4 -&gt; AVG 71.56%
+STEP: 5 -&gt; AVG 71.56%
+
+Maxhops
+[[8, 6, 0, 12], [12, 0, 7, 8], [12, 0, 7, 14], [14, 7, 0, 12]]</code></pre>
+<h1 id="debugging">Debugging</h1>
+<h2 id="why-four-steps-in-single-only-case">Why four steps in Single only case?</h2>
+<p>In step 3, Host 8 sends 14 about the info of 12. ? Why does this make 2 communication count?</p>
+<pre><code>**** Host 8 **************************
+DB:Single:[(0)(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(12)(13)(14)]
+inputDictionary - {2:[(0)(1)(11)(12)]|3:[(0)(9)(10)(11)(12)]|4:[(1)(9)(10)(12)(13)]|6:[(1)(9)(12)(13)]|7:[(1)(9)(10)(11)(12)(13)]|14:[(0)(1)(10)(13)]}
+outputBuffer - Buffer:Singles:[(0)(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(12)(13)(14)]
+oldOutputBuffer - Buffer:Singles:[(0)(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(13)(14)]
+outputDictionary - {2:[]|3:[]|4:[]|6:[]|7:[]|14:[(12)]}
+***************************************</code></pre>
+<p>The thing is that 12 already has the (12) information, but host 8 does not know about it.</p>
+<p>This is because 14 didn't send (12) to (8) - <code>14:[(0)(1)(10)(13)]</code></p>
+<p><strong>I think it's possible situation.</strong></p>
+<pre><code>**** Host 14 **************************
+DB:Single:[(0)(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(12)(13)(14)]
+inputDictionary - {4:[(1)(2)(6)(10)(12)(13)]|5:[(0)(10)(12)(13)]|7:[(1)(10)(12)(13)]|8:[(0)(1)(10)(13)]|9:[(0)(3)(6)(12)(13)]|11:[(0)(2)(3)(10)(12)]}
+outputBuffer - Buffer:Singles:[(0)(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(12)(13)(14)]
+oldOutputBuffer - Buffer:Singles:[(0)(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(13)(14)]
+outputDictionary - {4:[]|5:[]|7:[]|8:[(12)]|9:[]|11:[]}
+***************************************</code></pre>
+<h2 id="why-there-are-two-communication">Why there are two communication?</h2>
+<pre><code>* host [8] *
+has nothing to send to :  2
+has nothing to send to :  3
+has nothing to send to :  4
+has nothing to send to :  6
+has nothing to send to :  7
+(14) received Contexts from (8): [(12)]
+
+* host [14] *
+has nothing to send to :  4
+has nothing to send to :  5
+has nothing to send to :  7
+(8) received Contexts from (14): [(12)]</code></pre>
+<p>I just missed it.</p>
+<pre><code>**** Host 14 **************************
+DB:Single:[(0)(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(12)(13)(14)]
+inputDictionary - {4:[(1)(2)(6)(10)(12)(13)]|5:[(0)(10)(12)(13)]|7:[(1)(10)(12)(13)]|8:[(0)(1)(10)(13)]|9:[(0)(3)(6)(12)(13)]|11:[(0)(2)(3)(10)(12)]}
+outputBuffer - Buffer:Singles:[(0)(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(12)(13)(14)]
+oldOutputBuffer - Buffer:Singles:[(0)(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(13)(14)]
+
+                                       VV
+outputDictionary - {4:[]|5:[]|7:[]|8:[(12)]|9:[]|11:[]}
+***************************************</code></pre>
+<h2 id="what-about-the-aggregation-case">What about the aggregation case?</h2>
+<h3 id="trace-it">Trace it</h3>
+<p>Step 1 OK:</p>
+<pre><code>**** Host 9 **************************
+DB:Single:[(1)(2)(9)(10)(11)(14)]
+inputDictionary - {1:[(1)]|2:[(2)]|11:[(11)]|10:[(10)]|14:[(14)]}
+outputBuffer - Buffer:Aggr:&lt;6(1)(2)(9)(10)(11)(14)&gt;
+oldOutputBuffer - Buffer:Singles:[(9)]
+outputDictionary - {1:[&lt;6(1)(2)(9)(10)(11)(14)&gt;]|2:[&lt;6(1)(2)(9)(10)(11)(14)&gt;]|11:[&lt;6(1)(2)(9)(10)(11)(14)&gt;]|10:[&lt;6(1)(2)(9)(10)(11)(14)&gt;]|14:[&lt;6(1)(2)(9)(10)(11)(14)&gt;]}
+***************************************</code></pre>
+<p>Step 2:</p>
+<pre><code>**** Host 9 **************************
+DB:Single:[(1)(2)(9)(10)(11)(14)]NPrime:[&lt;3(0)(6)(12)&gt;&lt;4(4)(5)(7)(8)&gt;&lt;4(4)(5)(6)(13)&gt;&lt;4(3)(5)(12)(13)&gt;&lt;5(5)(6)(7)(8)(13)&gt;]
+inputDictionary - {1:[&lt;7(1)(3)(5)(9)(11)(12)(13)&gt;]|2:[&lt;8(2)(5)(6)(7)(8)(9)(10)(13)&gt;]|11:[&lt;8(1)(4)(5)(6)(9)(11)(13)(14)&gt;]|10:[&lt;6(0)(2)(6)(9)(10)(12)&gt;]|14:[&lt;7(4)(5)(7)(8)(9)(11)(14)&gt;]}
+outputBuffer - Buffer:Aggr:&lt;11(1)(2)(5)(6)(7)(8)(9)(10)(11)(13)(14)&gt;
+oldOutputBuffer - Buffer:Aggr:&lt;6(1)(2)(9)(10)(11)(14)&gt;
+outputDictionary - {1:[&lt;11(1)(2)(5)(6)(7)(8)(9)(10)(11)(13)(14)&gt;]|2:[]|11:[&lt;11(1)(2)(5)(6)(7)(8)(9)(10)(11)(13)(14)&gt;]|10:[&lt;11(1)(2)(5)(6)(7)(8)(9)(10)(11)(13)(14)&gt;]|14:[&lt;11(1)(2)(5)(6)(7)(8)(9)(10)(11)(13)(14)&gt;]}
+***************************************</code></pre>
+<h3 id="find-it">Find it!</h3>
+<p>It's the bug in merger. NPrime:[&lt;3(0)(6)(12)&gt;&lt;4(4)(5)(7)(8)&gt;&lt;4(4)(5)(6)(13)&gt;&lt;4(3)(5)(12)(13)&gt;&lt;5(5)(6)(7)(8)(13)&gt;]</p>
+<pre><code>--&gt; &lt;5(5)(6)(7)(8)(13)&gt; is selected when 
+--&gt; &lt;3(0)(6)(12)&gt;&lt;4(4)(5)(7)(8)&gt; should have been selected.</code></pre>
+<h2 id="after-the-fix">After the fix</h2>
+<pre><code>Size: based on the steps
+1:92(92) -&gt; (g(0):c(92))
+2:92(184) -&gt; (g(92):c(0))
+3:90(274) -&gt; (g(90):c(0))
+4:11(285) -&gt; (g(11):c(0))
+
+Accuracy: agg
+STEP: 1 -&gt; AVG 47.56%
+STEP: 2 -&gt; AVG 72.44%
+STEP: 3 -&gt; AVG 96.00%
+STEP: 4 -&gt; AVG 100.00%
+Accuracy: single
+STEP: 1 -&gt; AVG 47.56%
+STEP: 2 -&gt; AVG 64.00%
+STEP: 3 -&gt; AVG 72.89%
+STEP: 4 -&gt; AVG 72.89%
+
+Maxhops
+[[8, 6, 0, 12], [12, 0, 7, 8], [12, 0, 7, 14], [14, 7, 0, 12]]</code></pre>

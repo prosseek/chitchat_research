@@ -1,0 +1,162 @@
+<h1 id="debugging-snapshot-1-20130920">DEBUGGING SNAPSHOT 1 [2013/09/20]</h1>
+<h2 id="symptom">Symptom</h2>
+<p>The result</p>
+<pre><code>Size: based on the steps
+1:50(50) -&gt; (g(0):c(50))
+2:206(256) -&gt; (g(0):c(206))
+3:94(350) -&gt; (g(0):c(94))
+
+Accuracy: agg
+STEP: 1 -&gt; AVG 60.00%
+STEP: 2 -&gt; AVG 98.00%
+STEP: 3 -&gt; AVG 100.00%
+Accuracy: single
+STEP: 1 -&gt; AVG 60.00%
+STEP: 2 -&gt; AVG 98.00%
+STEP: 3 -&gt; AVG 100.00%
+
+Maxhops
+[[3, 9, 0, 7], [7, 0, 6, 3]]
+
+Size: based on the steps
+1:50(50) -&gt; (g(0):c(50))
+2:50(100) -&gt; (g(50):c(0))
+3:35(135) -&gt; (g(35):c(0))
+4:7(142) -&gt; (g(7):c(0))
+
+Accuracy: agg
+STEP: 1 -&gt; AVG 60.00%
+STEP: 2 -&gt; AVG 86.00%
+STEP: 3 -&gt; AVG 100.00%
+STEP: 4 -&gt; AVG 100.00% &lt;-- This is a bug (or feature?), 
+      the communication should stop after step 3. Why keep going? 
+Why each node doesn&#39;t know that other nodes know already everything
+
+Accuracy: single
+STEP: 1 -&gt; AVG 60.00%
+STEP: 2 -&gt; AVG 84.00%
+STEP: 3 -&gt; AVG 88.00%
+STEP: 4 -&gt; AVG 88.00%
+
+Maxhops
+[[3, 9, 0, 7], [7, 0, 6, 3]]</code></pre>
+<ul>
+<li>The gain is 350/142, but as the max hop is 4, there should be only three hops for getting all the results. -&gt; This is a bug!</li>
+</ul>
+<h2 id="analyze">analyze</h2>
+<p>At time step 4, (4) still sends the information to (5) and (7).</p>
+<pre><code>(5) received Contexts from (4): [&lt;G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|&gt;]
+(7) received Contexts from (4): [&lt;G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|&gt;]</code></pre>
+<p>At time step 3, (3) has updated information</p>
+<pre><code>outputBuffer - Buffer:Aggr:&lt;G10|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|&gt;
+oldOutputBuffer - Buffer:Aggr:&lt;G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|&gt;</code></pre>
+<p>And it says, it's got a new information &quot;3&quot;.</p>
+<h3 id="bug-found">Bug found</h3>
+<p>At time step 2:</p>
+<pre><code>**** Host 4 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]NPrime:[&lt;G2|id(1)11|id(3)11|&gt;]</code></pre>
+<p>Node 4 has NPrime (1,3), however it should not be NPrime as it has id(1) single element in it.</p>
+<p>This is the previous record:</p>
+<pre><code>**** Host 4 **************************
+DB:Single:[(id(0)11)(id(2)11)(id(4)11)(id(5)11)(id(7)11)(id(8)11)]
+inputDictionary - {0:[(id(0)11)]|8:[(id(8)11)]|2:[(id(2)11)]|5:[(id(5)11)]|7:[(id(7)11)]}
+outputBuffer - Buffer:Aggr:&lt;G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|&gt;
+oldOutputBuffer - Buffer:Singles:[(id(4)11)]
+outputDictionary - {0:[&lt;G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|&gt;]|8:[&lt;G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|&gt;]|2:[&lt;G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|&gt;]|5:[&lt;G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|&gt;]|7:[&lt;G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|&gt;]}
+***************************************</code></pre>
+<p>Node 4 has (0,2,5,7,8) as neighbors. Then, this is the next step (step 3).</p>
+<pre><code>**** Host 4 **************************
+DB:Single:[(id(0)11)(id(1)11)(id(2)11)(id(4)11)(id(5)11)(id(6)11)(id(7)11)(id(8)11)(id(9)11)]NPrime:[&lt;G2|id(1)11|id(3)11|&gt;]
+inputDictionary - {0:[&lt;G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|&gt;]|8:[&lt;G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|&gt;]|2:[&lt;G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|&gt;]|5:[&lt;G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|&gt;]|7:[&lt;G4|id(0)11|id(4)11|id(5)11|id(7)11|&gt;]}
+outputBuffer - Buffer:Aggr:&lt;G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|&gt;
+oldOutputBuffer - Buffer:Aggr:&lt;G6|id(0)11|id(2)11|id(4)11|id(5)11|id(7)11|id(8)11|&gt;
+outputDictionary - {0:[&lt;G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|&gt;]|8:[&lt;G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|&gt;]|2:[&lt;G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|&gt;]|5:[&lt;G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|&gt;]|7:[&lt;G9|id(0)11|id(1)11|id(2)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|&gt;]}
+***************************************</code></pre>
+<p>Think about the inputs:</p>
+<pre><code>024578
+{0:[&lt;G7|id(0)11|id(4)11|id(5)11|id(6)11|id(7)11|id(8)11|id(9)11|&gt;]| &lt;-- 024578 =&gt; 6/9 as a new aggregation
+ 2:[&lt;G6|id(1)11|id(2)11|id(3)11|id(4)11|id(6)11|id(8)11|&gt;]|         &lt;-- 024578 =&gt; 1/3/6 
+ 5:[&lt;G6|id(0)11|id(1)11|id(4)11|id(5)11|id(7)11|id(9)11|&gt;]|         &lt;-- 024578 =&gt; 1/9
+ 7:[&lt;G4|id(0)11|id(4)11|id(5)11|id(7)11|&gt;]}                         &lt;-- 024578 =&gt; No
+ 8:[&lt;G6|id(0)11|id(1)11|id(2)11|id(3)11|id(4)11|id(8)11|&gt;]|         &lt;-- 024578 =&gt; 1/3
+ </code></pre>
+<p>From this configuration, 6 is found from (1/3) and (1/3/6), and then 9 is recovered from (6/9) And 1 is recovered from (1/9), and finally 3 <strong>should be</strong> recovered from (1/3). This is missing:</p>
+<div class="figure">
+<img src="./graph.png" title="Logo Title Text 2" alt="Graph for random10" /><p class="caption">Graph for random10</p>
+</div>
+<h2 id="bug-tracing">Bug Tracing</h2>
+<p>This is the result when I print out the first item.</p>
+<pre><code>while n:
+    ci = c.pop(0)
+    supersetList = findSuperset(ci, c)
+
+    print ci
+
+(id(2)10)
+(id(5)10)
+(id(0)10)
+(id(4)10)
+(id(8)10)
+(id(7)10)
+&lt;G2|id(1)10|id(3)10|&gt; &lt;-- This should come later
+(id(6)10)
+(id(9)10)
+(id(1)10)</code></pre>
+<h3 id="found">Found!</h3>
+<p>The issue was that</p>
+<pre><code>----
+&lt;G2|id(1)10|id(3)10|&gt;
+Found superset
+[&lt;G3|id(1)10|id(3)10|id(6)10|&gt;]
+----
+(id(6)10)
+Found superset
+[&lt;G2|id(6)10|id(9)10|&gt;]
+----
+(id(9)10)
+Found superset
+[&lt;G2|id(1)10|id(9)10|&gt;]
+----
+(id(1)10)
+Found superset
+[]
+----</code></pre>
+<p>The thing is that when aggregated context is broken, the broken one (1/3) should be placed into</p>
+<h2 id="fix-the-bug">Fix the bug</h2>
+<p>[2013/09/20] 02:09pm uploaded to git <em>demerge code rewrite</em>. (50984c3)</p>
+<h2 id="rerun-to-get-the-result">Rerun to get the result</h2>
+<pre><code>1:50(50) -&gt; (g(0):c(50))
+2:50(100) -&gt; (g(50):c(0))
+3:42(142) -&gt; (g(42):c(0))
+4:2(144) -&gt; (g(2):c(0)) &lt;-- Maybe this should be 0
+
+Accuracy: agg
+STEP: 1 -&gt; AVG 60.00%
+STEP: 2 -&gt; AVG 95.00%
+STEP: 3 -&gt; AVG 100.00%
+STEP: 4 -&gt; AVG 100.00%
+Accuracy: single
+STEP: 1 -&gt; AVG 60.00%
+STEP: 2 -&gt; AVG 87.00%
+STEP: 3 -&gt; AVG 90.00%
+STEP: 4 -&gt; AVG 90.00%
+
+Maxhops
+[[3, 9, 0, 7], [7, 0, 6, 3]]</code></pre>
+<p>After the update in the algorithm, I finally get the three step results.</p>
+<pre><code>Size: based on the steps
+1:50(50) -&gt; (g(0):c(50))
+2:50(100) -&gt; (g(50):c(0))
+3:41(141) -&gt; (g(41):c(0))
+
+Accuracy: agg
+STEP: 1 -&gt; AVG 60.00%
+STEP: 2 -&gt; AVG 93.00%
+STEP: 3 -&gt; AVG 100.00%
+Accuracy: single
+STEP: 1 -&gt; AVG 60.00%
+STEP: 2 -&gt; AVG 87.00%
+STEP: 3 -&gt; AVG 90.00%
+
+Maxhops
+[[3, 9, 0, 7], [7, 0, 6, 3]]</code></pre>

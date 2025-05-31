@@ -1,0 +1,40 @@
+## Goal
+
+Now, we have the results from `massiveSimulate.py` for the case mesh10* files in testSampleDirectory.  
+
+    pattern = os.path.join(testSampleDirectory, "mesh10*.txt")
+    a,s,c = runMassiveSimulation(pattern, singleOnly=False)
+    print a
+    print s
+    print c
+
+The result is a/s/c (accuracy, speed, count) and generated time stamp with the condition when the results are made
+
+	2014-01-30 10:56:02
+	_mesh10*.txt True
+	10.0,10.0,0.0,0.0
+	3.0
+	166.0,0.0
+	
+I need to get the values, and I need to process these values to make Excel spread sheets. 
+
+
+## Action Items
+
+1. Create all the patterns for
+	1. For tree mesh (x2)
+	2. For each pattern (10 .. 100) (x 10)
+	3. For singleOnly or not (x2)
+
+So we have 40 simulations for 100 graphs: 4000 in total.
+
+The result will be recorded in
+
+	Name True/False <-- singleOnly
+	Results in asc format
+	Blank
+	...
+	
+OK. Started the massive simulation at [2014/01/30] 11:01am. 
+
+ 

@@ -1,0 +1,14 @@
+1:8(8) -> (g(0):c(8))
+2:8(16) -> (g(8):c(0))
+Accuracy: total
+STEP: 1 -> AVG 75.00%
+STEP: 2 -> AVG 100.00%
+Accuracy: agg
+STEP: 1 -> AVG 75.00%
+STEP: 2 -> AVG 100.00%
+Accuracy: single
+STEP: 1 -> AVG 75.00%
+STEP: 2 -> AVG 100.00%
+Accuracy: cohorts
+STEP: 1 -> COHORTS number(0), total member size(0), average member in cohort ( 0.00)
+STEP: 2 -> COHORTS number(0), total member size(0), average member in cohort ( 0.00)

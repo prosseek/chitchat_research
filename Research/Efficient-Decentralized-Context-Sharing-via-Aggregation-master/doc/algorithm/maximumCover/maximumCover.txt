@@ -1,0 +1,40 @@
+# Maximum Cover algorithm
+
+## Problem definition
+
+When we have five aggregates (a-e) that has a subset of singles universe(1-7), 
+how can we find the set of aggregates that covers most in the universe.
+
+For example, in this input.
+
+      12345678
+    a XX
+    b  XXX
+    c   XXX  X
+    d     XXX
+    e       XX
+    
+We find that [c,a] will give us the maximum coverage of the universe.
+
+## Algorithm
+
+### friends and enemies
+
+Let's define friends of an aggregate as a set of aggregates that doesn't share elements.
+For example, 'a' and 'c','d','e' are friends, whereas 'b' is an enemy.
+
+### Ideas
+
+ 1. The idea starts with selecting the aggregate that has the maximum element. In this example, 'c' is selected. 
+ 2. A set of solution is collected as we iterate (recurse). For the first case, we have ['c'] as a solution.
+ 3. When we select a set of friends among which the next solution is selected. 'c' has single friend 'a'. 
+ 4. We also amass the set of enemies. The enemies are a set of enemies from the solution, and the solution itself is a part of enemy. After we get the friend set, we remove enemies from the friends. 
+ 
+### Example
+ 
+ 1. 'c' has the maximum number of elements, so 'c' is included in the solution:[c]
+ 2. 'c' has a friend 'a', and enemies of [b,d,e] + 'c', and remove enemies from friend, and we get a new friend set [a]
+ 3. we recursively call solve() method with friend([a]), and enemy([b,c,d,e])
+ 4. a is added to solution ([c,a])
+ 5. a has friend [c,d,e], however all of them are in enemy set, so a has no friend.
+ 6. Return the solution ([c,a])

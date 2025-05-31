@@ -1,0 +1,83 @@
+<h2 id="example">Example</h2>
+<p><code>+schema sensors = (name , event | advertisement , time?)</code></p>
+<h3 id="idea">Idea</h3>
+<ol style="list-style-type: decimal">
+<li>The schema call becomes a function call.</li>
+<li>There are four possibilities, provide the code generator for each case.</li>
+<li>only name</li>
+<li>choice</li>
+<li>optional</li>
+<li>repetition (explained in code_example_rep document)</li>
+<li>When all is done, <code>push_summary</code> and return.</li>
+</ol>
+<pre><code>   function_call SENSORS
+   stop
+
+   ...
+
+       push_summary
+   END:
+       return 0
+</code></pre>
+<h3 id="only-name">Only name</h3>
+<p>In the example, <code>name</code> is translated as follows. We need to creat an unique END label.</p>
+<pre><code>    read name
+    jpeekfalse END
+    register name</code></pre>
+<h3 id="choice">Choice</h3>
+<p>Choice requires two additional labels (normal, end label).</p>
+<pre><code># event | advertisement
+    read event
+    jpeekfalse ADVERTISEMENT
+    register event
+    jmp ADVERTISEMENTEND
+ADVERTISEMENT:
+    pop $temp
+    read advertisement
+    jpeekfalse END
+    register advertisement
+ADVERTISEMENTEND:</code></pre>
+<h3 id="optional">Optional</h3>
+<p>Optional also requires two additional label. No end label is needed.</p>
+<pre><code># time?
+    read time
+    jpeekfalse TIMEEND
+    register time
+    jmp TIMENEXT
+TIMEEND:
+    pop $temp
+TIMENEXT:</code></pre>
+<h3 id="overall-results">Overall results</h3>
+<pre><code>    function_call SENSORS
+    stop
+
+SENSORS:
+    read name
+    jpeekfalse END
+    register name
+
+# event | advertisement
+    read event
+    jpeekfalse ADVERTISEMENT
+    register event
+    jmp ADVERTISEMENTEND
+ADVERTISEMENT:
+    pop $temp
+    read advertisement
+    jpeekfalse END
+    register advertisement
+ADVERTISEMENTEND:
+
+# time?
+    read time
+    jpeekfalse TIMEEND
+    register time
+    jmp TIMENEXT
+TIMEEND:
+    pop $temp
+TIMENEXT:
+
+# final - summing up the summary
+    push_summary
+END:
+    return 0</code></pre>

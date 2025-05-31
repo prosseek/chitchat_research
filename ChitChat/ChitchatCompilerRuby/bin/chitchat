@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby -s
+# NotRuby interpreter
+$:.unshift File.expand_path("../../lib/chitchat", __FILE__)
+#$: << "../lib/chitchat"
+
+prg_name = "chitchat"
+require "interpreter"
+require "readline"
+
+if $h # -h option
+  abort <<USAGE
+Usage:
+
+  ./#{prg_name} # start REPL
+  ./#{prg_name} file.rb
+  ./#{prg_name} -e='code'
+
+USAGE
+end
+
+# Eval some code
+# $e = # -e option
+if $e
+  Interpreter.new.eval($e)
+
+elsif ARGV.first
+  Interpreter.new.eval(File.read(ARGV.first))
+
+# Start the REPL, read-eval-print-loop, or interactive interpreter
+else
+  puts "NotRuby REPL, CTRL+C to quit"
+  interpreter = Interpreter.new
+  loop do
+    line = Readline::readline(">> ")
+    Readline::HISTORY.push(line)
+    begin
+      result = interpreter.eval(line).ruby_value
+      puts "=> #{result.inspect}"
+    rescue => error
+      puts error
+    end
+  end
+
+end

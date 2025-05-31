@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ContextSharingSimulation/Context Sharing Simulation.iml" filepath="$PROJECT_DIR$/ContextSharingSimulation/Context Sharing Simulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contextProcessor/.idea/modules/contextprocessor.iml" filepath="$PROJECT_DIR$/contextProcessor/.idea/modules/contextprocessor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contextProcessor/.idea/modules/contextprocessor-build.iml" filepath="$PROJECT_DIR$/contextProcessor/.idea/modules/contextprocessor-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contextSummary/.idea/modules/contextsummary.iml" filepath="$PROJECT_DIR$/contextSummary/.idea/modules/contextsummary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contextSummary/.idea/modules/contextsummary-build.iml" filepath="$PROJECT_DIR$/contextSummary/.idea/modules/contextsummary-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contextSummaryEvaluator/.idea/modules/contextsummaryevaluator.iml" filepath="$PROJECT_DIR$/contextSummaryEvaluator/.idea/modules/contextsummaryevaluator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contextSummaryEvaluator/.idea/modules/contextsummaryevaluator-build.iml" filepath="$PROJECT_DIR$/contextSummaryEvaluator/.idea/modules/contextsummaryevaluator-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/one_simulator/one_simulator.iml" filepath="$PROJECT_DIR$/one_simulator/one_simulator.iml" />
+    </modules>
+  </component>
+</project>

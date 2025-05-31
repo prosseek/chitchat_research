@@ -1,0 +1,15 @@
+1:66(66) -> (g(0):c(66))
+2:66(132) -> (g(66):c(0))
+3:28(160) -> (g(28):c(0))
+Accuracy: total
+STEP: 1 -> AVG 76.00%
+STEP: 2 -> AVG 100.00%
+STEP: 3 -> AVG 100.00%
+Accuracy: agg
+STEP: 1 -> AVG 76.00%
+STEP: 2 -> AVG 100.00%
+STEP: 3 -> AVG 100.00%
+Accuracy: single
+STEP: 1 -> AVG 76.00%
+STEP: 2 -> AVG 96.00%
+STEP: 3 -> AVG 96.00%

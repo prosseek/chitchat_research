@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="scalautils">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/scalautils.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,11 @@
++type hello extends Range(min=-10, max=10, size=5, signed=true)
+-type hour extends Range(size=5, min=0, max=23, signed=false)
+-type minute extends Range(size=6, min=0, max=59, signed=false)
++type time extends Encoding(hour, minute)
+
++type temperature extends Float(min=-50.0, max=90.0)
++type event extends String(alphanum())
++type max10 extends String(maxlength(10))
++type "only a b" extends String(min = 'a', max = 'b')
++type markethour extends hour(min=10, max=18)
++type "market time" extends time(markethour)

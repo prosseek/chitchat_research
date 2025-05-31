@@ -1,0 +1,8 @@
+latitude -> (30, 25, 38, 2)
+longitude -> (-17, 47, 11, 0)
+message -> What's your problem?
+time -> (11, 21)
+date -> (2015, 01, 01)
+level of athelete -> 9
+athelete -> john
+value_f -> 11.2

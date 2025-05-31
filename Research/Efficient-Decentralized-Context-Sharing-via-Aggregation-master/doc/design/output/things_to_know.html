@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Design decisions from the Snapshot programming project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="'프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략' 서적 홈페이지">
+    <meta name="author" content="Sungmin Cho">
+
+    <!-- Le styles -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/static/css/jmbook.css" rel="stylesheet">
+
+	<!-- mathjax -->
+	<script type="text/javascript"
+		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+
+	<!-- highlighter.js -->
+	<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/vs.min.css">
+	<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="/static/ico/favicon.ico">
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<!-- <div class="row-fluid"> -->
+		<!-- 	<div class="span12 well"> -->
+		<!-- 		<section class="title"> -->
+		<!-- 			<p class="tagline">프로그래밍 대회에서 배우는</p> -->
+		<!-- 			<p class="title">알고리즘 문제 해결 전략</p> -->
+		<!-- 		</section> -->
+		<!-- 	</div> -->
+		<!-- </div> -->
+		<div class="row-fluid">
+			<div class="span3">
+				<div class="sidebar well">
+					<section class="title">
+						<p class="tagline"First line</p>
+						<p class="title"><a href="index.html">index.html</a></p>
+					</section>
+					<section>
+						<ul class="nav nav-list">
+							
+							<li><a href="groupContext.html"><i class="icon-shopping-cart"></i> GroupContext</a></li>
+							
+							<li><a href="things_to_know.html"><i class="icon-shopping-cart"></i> Things to know</a></li>
+							
+						</ul>
+					</section>
+				</div>
+			</div>
+			<div class="span9 content">
+				<h1>Things to know</h1>
+<h2>Simulation principles</h2>
+<p><code>Network#simulate()</code> is the simulation method for algorithm checking.
+The structure is about reading sample file that contains sampled value, and executing the 
+while loop forever until count becomes the endCount. </p>
+<pre><code>def simulate(self, sampleFile, endCount = None):
+    # preprocessing
+    for obj in self.hostDict.values():
+        obj.readFromSampleDataFile(sampleFile)
+
+    if endCount is None:
+        endCount = SIMULATION_END
+
+    count = 0
+    while True:
+        self.preparation(count)
+        self.action(count)
+        count += 1
+        if count == endCount:
+            break
+
+        if Network.printResult: print "\n"
+</code></pre>
+<p>The simulation code in the while loop is two step process: <code>preparation</code> and <code>action</code>. 
+In <code>preparation</code> step, <code>host#generateContext</code> is invoked to calculate the contexts that are going to send. <code>host#sendContexts</code> is filled depending on the computation results. </p>
+<pre><code>def preparation(self, count):
+    for i, host in self.hostDict.items():
+        host.generateContext(count, printFlag = Network.printResult)
+</code></pre>
+<p>The contexts that should be send is the followings.</p>
+<ol>
+<li>The Context that has <code>hop-count &lt; tau</code>.</li>
+<li>The merged GroupContext.</li>
+</ol>
+<p>In <code>Network#action()</code> method, the contexts are sent to the neighbors.</p>
+<pre><code>def action(self, count):
+    for i, host in self.hostDict.items():
+        host.sendContextsToNeighbors(self.hostDict, printFlag = Network.printResult)
+</code></pre>
+<p>Note that sending Contexts actually executes the <code>host#receiveContexts()</code> method of the neighboring nodes. </p>
+<pre><code>def sendContextsToNeighbors(self, hostDict, printFlag = True):
+    for n in self.neighbors:
+        nobject = hostDict[n]
+        nobject.receiveContexts(self.sendContexts, self.id, printFlag)
+</code></pre>
+<p><code>Network#hostDict</code> contains the dictionary that maps from host id, to the host object. 
+Note that the key is <code>id</code> number which is an integer. </p>
+<pre><code>def buildHost(self, topology = None):
+    if topology is None:
+        topology = self.networkTopology
+
+    for key, values in topology.items():
+        self.hostDict[key] = Host(key, values)
+
+    return self.hostDict
+
+def networkFileParsing(self):
+    if self.networkTopology: return self.networkTopology
+
+    with open(self.networkFile, 'r') as f:
+        for l in f:
+            first, rest = getFirstRest(l)
+            self.networkTopology[first] = rest
+</code></pre>
+<p>This is the network topology file content. First column shows the host id, and the rest of the line is the neighboring node ids. </p>
+<pre><code>1: 2
+2: 1 3
+3: 2 4 6
+4: 3 5
+5: 4
+6: 3 7
+7: 6 8
+8: 7
+</code></pre>
+<p><img alt="Network" src="../output/static/img/node.png" /></p>
+<h2>Create the contexts to send</h2>
+<p>Based on the algorithm 1, <code>contextAggregator#aggregate()</code> computes the maximally merged GroupContext. The input for this method should be:</p>
+<ol>
+<li>The individual contexts it has calculated so far. </li>
+<li>The incoming GroupContext or Context from neighboring nodes.</li>
+</ol>
+<p>The <code>contextAggregator#aggregate()</code> method also returns prime aggregates and non-prime aggregates also. </p>
+<h2>Use <code>same</code> not <code>==</code> in list comparisons.</h2>
+<p>We have two lists, in terms of comparison, you cannot use <code>==</code> operator.
+Consider this example:</p>
+<pre><code>class A(object): pass
+
+a = A()
+b = A()
+c = A()
+
+print [a,b,c] == [a,b,c] # True
+print [a,b,c] == [c,b,a] # False
+</code></pre>
+<p>The list members should be the same and in the same order.</p>
+<p>So, when you do some comparisons with the return value from an operation such <code>remove()</code>.
+You just cannot compare two lists. Instead you should use <code>same()</code> method.</p>
+<pre><code>result = remove([a,b,c],c)
+expected = [a,b]
+printList(result)
+printList(expected)
+self.assertTrue(result == expected) # Returns False
+self.assertTrue(same(result,expected)) # Returns True
+</code></pre>
+<p><code>same()</code> method is in utility.py file. </p>
+<pre><code>def same(contexts1, contexts2):
+    s1 = set(contexts1)
+    s2 = set(contexts1)
+    return s1 == s2
+</code></pre>
+			</div>
+		</div>
+
+		<hr>
+
+		<footer>
+			<p>&copy; 2013, Sungmin Cho</p>
+		</footer>
+
+	</div><!--/.fluid-container-->
+
+	<!-- Le javascript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="/static/js/jmbook.js"></script>
+	<script src="/static/js/bootstrap.js"></script>
+</body>
+</html>

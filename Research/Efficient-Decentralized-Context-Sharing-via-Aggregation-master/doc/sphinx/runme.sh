@@ -1,0 +1,1 @@
+sphinx-build -b html -D pngmath_latex=`which latex` . _build/html

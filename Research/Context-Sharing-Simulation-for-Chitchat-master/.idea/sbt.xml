@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaSbtSettings">
+    <option name="linkedExternalProjectsSettings">
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/contextProcessor" />
+        <option name="jdk" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/contextProcessor" />
+            <option value="$PROJECT_DIR$/contextProcessor/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="0.13.5" />
+        <option name="useAutoImport" value="true" />
+        <option name="useOurOwnAutoImport" value="true" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/contextSummary" />
+        <option name="jdk" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/contextSummary" />
+            <option value="$PROJECT_DIR$/contextSummary/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="0.13.5" />
+        <option name="useAutoImport" value="true" />
+        <option name="useOurOwnAutoImport" value="true" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/contextSummaryEvaluator" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/contextSummaryEvaluator" />
+            <option value="$PROJECT_DIR$/contextSummaryEvaluator/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="0.13.5" />
+        <option name="useAutoImport" value="true" />
+        <option name="useOurOwnAutoImport" value="true" />
+      </SbtProjectSettings>
+    </option>
+  </component>
+</project>

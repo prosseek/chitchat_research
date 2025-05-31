@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Design decisions from the Snapshot programming project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="'프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략' 서적 홈페이지">
+    <meta name="author" content="Sungmin Cho">
+
+    <!-- Le styles -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/static/css/jmbook.css" rel="stylesheet">
+
+	<!-- mathjax -->
+	<script type="text/javascript"
+		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+
+	<!-- highlighter.js -->
+	<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/vs.min.css">
+	<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="/static/ico/favicon.ico">
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<!-- <div class="row-fluid"> -->
+		<!-- 	<div class="span12 well"> -->
+		<!-- 		<section class="title"> -->
+		<!-- 			<p class="tagline">프로그래밍 대회에서 배우는</p> -->
+		<!-- 			<p class="title">알고리즘 문제 해결 전략</p> -->
+		<!-- 		</section> -->
+		<!-- 	</div> -->
+		<!-- </div> -->
+		<div class="row-fluid">
+			<div class="span3">
+				<div class="sidebar well">
+					<section class="title">
+						<p class="tagline"First line</p>
+						<p class="title"><a href="index.html">index.html</a></p>
+					</section>
+					<section>
+						<ul class="nav nav-list">
+							
+							<li><a href="groupContext.html"><i class="icon-shopping-cart"></i> GroupContext</a></li>
+							
+							<li><a href="things_to_know.html"><i class="icon-shopping-cart"></i> Things to know</a></li>
+							
+						</ul>
+					</section>
+				</div>
+			</div>
+			<div class="span9 content">
+				<h2>GroupContext</h2>
+<p>The usage format of GroupContext is</p>
+<pre><code>a = Context(1, 10)
+b = Context(2, 20)
+c = Context(3, 30)
+g = GroupContext(20, [a,b,c])
+</code></pre>
+<p>The first parameter is the aggregated value(average number in this example), and the second parameter is the list that constructs the 
+aggregated value. </p>
+<p>You don't have to calculate the average, as the average will be automatically calculated when
+the first argument is <code>None</code>. </p>
+<pre><code>g = GroupContext(None, [a,b,c])
+</code></pre>
+			</div>
+		</div>
+
+		<hr>
+
+		<footer>
+			<p>&copy; 2013, Sungmin Cho</p>
+		</footer>
+
+	</div><!--/.fluid-container-->
+
+	<!-- Le javascript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="/static/js/jmbook.js"></script>
+	<script src="/static/js/bootstrap.js"></script>
+</body>
+</html>

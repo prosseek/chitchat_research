@@ -1,0 +1,31 @@
+1:2322(2322) -> (g(0):c(2322))
+2:12874(15196) -> (g(0):c(12874))
+3:67465(82661) -> (g(0):c(67465))
+4:252460(335121) -> (g(0):c(252460))
+5:274016(609137) -> (g(0):c(274016))
+6:23376(632513) -> (g(0):c(23376))
+7:163(632676) -> (g(0):c(163))
+Accuracy: total
+STEP: 1 -> AVG  1.70%
+STEP: 2 -> AVG  9.35%
+STEP: 3 -> AVG 40.36%
+STEP: 4 -> AVG 88.22%
+STEP: 5 -> AVG 99.63%
+STEP: 6 -> AVG 100.00%
+STEP: 7 -> AVG 100.00%
+Accuracy: agg
+STEP: 1 -> AVG  1.70%
+STEP: 2 -> AVG  9.35%
+STEP: 3 -> AVG 40.36%
+STEP: 4 -> AVG 88.22%
+STEP: 5 -> AVG 99.63%
+STEP: 6 -> AVG 100.00%
+STEP: 7 -> AVG 100.00%
+Accuracy: single
+STEP: 1 -> AVG  1.70%
+STEP: 2 -> AVG  9.35%
+STEP: 3 -> AVG 40.36%
+STEP: 4 -> AVG 88.22%
+STEP: 5 -> AVG 99.63%
+STEP: 6 -> AVG 100.00%
+STEP: 7 -> AVG 100.00%

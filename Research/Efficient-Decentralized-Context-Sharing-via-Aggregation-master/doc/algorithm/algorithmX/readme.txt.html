@@ -1,0 +1,145 @@
+<h1 id="exact-cover-problem-algorithm-x-in-python">Exact cover problem (Algorithm X) in Python</h1>
+<p><a href="http://www.cs.mcgill.ca/~aassaf9/python/algorithm_x.html">This link</a> will give you the source location.</p>
+<h2 id="input">Input</h2>
+<p>It has two inputs, the first one is the total space, and the second one is the candidates.</p>
+<pre><code>X = {1, 2, 3, 4, 5, 6, 7}
+Y = {
+    &#39;A&#39;: [1, 4, 7],
+    &#39;B&#39;: [1, 4],
+    &#39;C&#39;: [4, 5, 7],
+    &#39;D&#39;: [3, 5, 6],
+    &#39;E&#39;: [2, 3, 6, 7],
+    &#39;F&#39;: [2, 7]}
+    
+    </code></pre>
+<h2 id="the-usage">The usage</h2>
+<p>The X input should be transformed into a dictionary of index - candidates.</p>
+<pre><code>X = {j: set(filter(lambda i: j in Y[i], Y)) for j in X}  
+print X
+
+{1: set([&#39;A&#39;, &#39;B&#39;]), 
+ 2: set([&#39;E&#39;, &#39;F&#39;]), 
+ 3: set([&#39;E&#39;, &#39;D&#39;]), 
+ 4: set([&#39;A&#39;, &#39;C&#39;, &#39;B&#39;]), 
+ 5: set([&#39;C&#39;, &#39;D&#39;]), 
+ 6: set([&#39;E&#39;, &#39;D&#39;]), 
+ 7: set([&#39;A&#39;, &#39;C&#39;, &#39;E&#39;, &#39;F&#39;])}
+ </code></pre>
+<p>Then you can run the solve() method to get the full cover.</p>
+<pre><code>a = solve(X, Y)
+for i in a: print i
+
+[&#39;B&#39;, &#39;D&#39;, &#39;F&#39;]</code></pre>
+<h2 id="the-idea">The idea</h2>
+<p>Start with index that has the shortest length; 1 has 'A' and 'B' that contains it, so choose it.</p>
+<pre><code>Y = {&#39;A&#39;: [1, 4, 7], &#39;C&#39;: [4, 5, 7], &#39;B&#39;: [1, 4], &#39;E&#39;: [2, 3, 6, 7], &#39;D&#39;: [3, 5, 6], &#39;F&#39;: [2, 7]}
+X = {1: set([&#39;A&#39;, &#39;B&#39;]), 
+     2: set([&#39;E&#39;, &#39;F&#39;]), 
+     3: set([&#39;E&#39;, &#39;D&#39;]), 
+     4: set([&#39;A&#39;, &#39;C&#39;, &#39;B&#39;]), 
+     5: set([&#39;C&#39;, &#39;D&#39;]), 
+     6: set([&#39;E&#39;, &#39;D&#39;]), 
+     7: set([&#39;A&#39;, &#39;C&#39;, &#39;E&#39;, &#39;F&#39;])}  
+solution = []</code></pre>
+<div class="figure">
+<img src="./selection1.png" alt="selection A" /><p class="caption">selection A</p>
+</div>
+<p>We start from '1' that has the smallest cover, and we start with solution 'A'. 'A' can cover (1,4,7), so when we choose 'A', 1(A,B), 4(A,B,C-&gt;C), 7(A,C,E,F-&gt;E,F) in column is chosen automatically. It says that when we choose 'A', we can't choose 'A','B','C','E','F'.</p>
+<pre><code>    input x: {1: set([&#39;A&#39;, &#39;B&#39;]), 2: set([&#39;E&#39;, &#39;F&#39;]), 3: set([&#39;E&#39;, &#39;D&#39;]), 4: set([&#39;A&#39;, &#39;C&#39;, &#39;B&#39;]), 5: set([&#39;C&#39;, &#39;D&#39;]), 6: set([&#39;E&#39;, &#39;D&#39;]), 7: set([&#39;A&#39;, &#39;C&#39;, &#39;E&#39;, &#39;F&#39;])}
+    solution: &#39;A&#39;</code></pre>
+<p>The result is that we remove all except the 'D'. However, we see that 2 is not covered (empty), so the choice of 'A' is wrong.</p>
+<pre><code>    output x: {2: set([]), 3: set([&#39;D&#39;]), 5: set([&#39;D&#39;]), 6: set([&#39;D&#39;])} 
+    return cols: [set([&#39;A&#39;, &#39;B&#39;]), set([&#39;C&#39;]), set([&#39;E&#39;, &#39;F&#39;])]</code></pre>
+<p>We step back, and choose 'B'.</p>
+<div class="figure">
+<img src="./selection2.png" alt="selection B" /><p class="caption">selection B</p>
+</div>
+<p>Same process, and we get new space that doesn't have 'A','B','C' caused by selecting 'B' as a solution.</p>
+<pre><code>column: [set([&#39;A&#39;, &#39;B&#39;]), set([&#39;C&#39;])] 
+output X: {
+    2: set([&#39;E&#39;, &#39;F&#39;]), 
+    3: set([&#39;E&#39;, &#39;D&#39;]), 
+    5: set([&#39;D&#39;]), 
+    6: set([&#39;E&#39;, &#39;D&#39;]), 
+    7: set([&#39;E&#39;, &#39;F&#39;])} 
+    </code></pre>
+<p>In a new world, 5 has smallest candidates to cover this: 'D'. So, select 'D'.</p>
+<div class="figure">
+<img src="./selection3.png" alt="selection D" /><p class="caption">selection D</p>
+</div>
+<p>Now, we have the solution:</p>
+<div class="figure">
+<img src="./selection4.png" alt="selection F" /><p class="caption">selection F</p>
+</div>
+<p>The result shows we have complete cover.</p>
+<div class="figure">
+<img src="./result.png" alt="Result" /><p class="caption">Result</p>
+</div>
+<h2 id="implementation">Implementation</h2>
+<h3 id="input-convertor">Input convertor</h3>
+<p>Starting from the first element in the total space, find the candidates that contain it.</p>
+<pre><code>X = {j:DO_SOMETHING for j in X} </code></pre>
+<p>The filter selects from Y only the elements appropriate. The rule is to find key (dictionary uses keys) that has j as the value.</p>
+<pre><code>print filter(&lt;lambda i: 1 in Y[i]&gt;, Y) --&gt; [&#39;A&#39;, &#39;B&#39;]
+
+DO_SOMETHING:
+    set(filter(lambda i: j in Y[i], Y))
+    </code></pre>
+<h3 id="selector">selector</h3>
+<div class="figure">
+<img src="./a.png" alt="steps" /><p class="caption">steps</p>
+</div>
+<pre><code>def select(X, Y, r):
+    cols = []
+    </code></pre>
+<p>It iterates over all the candidates in the solution space</p>
+<pre><code>    # X = {1: set([&#39;A&#39;, &#39;B&#39;]), 
+    # Y = {&#39;A&#39;: [1, 4, 7], &#39;C&#39;: [4, 5, 7], &#39;B&#39;: [1, 4], &#39;E&#39;: [2, 3, 6, 7], &#39;D&#39;: [3, 5, 6], &#39;F&#39;: [2, 7]} 
+    for j in Y[r]: # candidates r = &#39;A&#39;, Y[&#39;A&#39;] = 1/4/7
+                 </code></pre>
+<p>I need to remove all the columns in X: <code>X.pop(j)</code> is needed. It reduces the problem world. However, the column contents should not be duplicated:</p>
+<p>It also iterates over the total space: candidate covers 1/4/7, so <code>if k != j: X[k].remove(i)</code> is needed.</p>
+<pre><code>        for i in X[j]: # X[1] - &#39;A&#39;,&#39;B&#39;
+            for k in Y[i]: # again 1/4/7, but this time 1 is skipped 
+                if k != j: 
+                    # X[k] column is modified, and removed all the candidates
+                    # remove i A
+                    # X[k] set([&#39;A&#39;, &#39;C&#39;, &#39;B&#39;]) 4
+                    # X[k] set([&#39;C&#39;, &#39;B&#39;]) 4
+                    # X[k] set([&#39;A&#39;, &#39;C&#39;, &#39;E&#39;, &#39;F&#39;]) 7
+                    # X[k] set([&#39;C&#39;, &#39;E&#39;, &#39;F&#39;]) 7
+                    # X[k].remove(i) 
+                    # remove i B
+                    # X[k] set([&#39;C&#39;, &#39;B&#39;]) 4
+                    # X[k] set([&#39;C&#39;]) 4
+                    # For 7, there is no element B so skip it.
+        cols.append(X.pop(j)) # Remove the column of 1/4/7
+    return cols</code></pre>
+<h3 id="de-selector">de-selector</h3>
+<pre><code>def deselect(X, Y, r, cols):
+    for j in reversed(Y[r]):
+        X[j] = cols.pop()
+        for i in X[j]:
+            for k in Y[i]:
+                if k != j:
+                    X[k].add(i)</code></pre>
+<h3 id="solver">Solver</h3>
+<p>Solver has recursive structure with X as smaller space as we delve into methods. When X = [], we return (yield) the values</p>
+<pre><code>if not X:
+    yield list(solution)</code></pre>
+<p>Otherwise, we start from the minimum sized set.</p>
+<pre><code>c = min(X, key=lambda c: len(X[c])) # key that has the minimum number of elements in a dictionary
+for r in list(X[c]):</code></pre>
+<p>The idea is to assume the r as the solution, if not we need revert it.</p>
+<pre><code>    solution.append(r) 
+    </code></pre>
+<p>Use select() method to find columns that contains r.</p>
+<pre><code>    cols = select(X, Y, r)
+    </code></pre>
+<p>Then, we recursively call solve with smaller spaces.</p>
+<pre><code>    for s in solve(X, Y, solution):
+        yield s
+        </code></pre>
+<p>Then we unselect and pop when we are done.</p>
+<pre><code>    deselect(X, Y, r, cols)
+    solution.pop()    </code></pre>

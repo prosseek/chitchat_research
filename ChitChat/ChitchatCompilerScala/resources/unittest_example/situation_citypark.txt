@@ -1,0 +1,5 @@
+value cityParkCenter(latitude, longitude) = {
+  latitude = [30, 25, 01, 74]
+  longitude = [-97, 47, 21, 83]
+}
+situation nearCityPark() = |[latitude, longitude] - cityParkCenter| <= 5 _km

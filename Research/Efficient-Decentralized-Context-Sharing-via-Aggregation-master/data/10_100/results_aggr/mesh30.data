@@ -1,0 +1,27 @@
+1:154(154) -> (g(0):c(154))
+2:154(308) -> (g(154):c(0))
+3:154(462) -> (g(154):c(0))
+4:85(547) -> (g(85):c(0))
+5:55(602) -> (g(55):c(0))
+6:10(612) -> (g(10):c(0))
+Accuracy: total
+STEP: 1 -> AVG 20.44%
+STEP: 2 -> AVG 61.44%
+STEP: 3 -> AVG 86.56%
+STEP: 4 -> AVG 100.22%
+STEP: 5 -> AVG 99.78%
+STEP: 6 -> AVG 99.56%
+Accuracy: agg
+STEP: 1 -> AVG 20.44%
+STEP: 2 -> AVG 56.78%
+STEP: 3 -> AVG 80.67%
+STEP: 4 -> AVG 97.67%
+STEP: 5 -> AVG 99.56%
+STEP: 6 -> AVG 99.56%
+Accuracy: single
+STEP: 1 -> AVG 20.44%
+STEP: 2 -> AVG 21.00%
+STEP: 3 -> AVG 21.11%
+STEP: 4 -> AVG 23.22%
+STEP: 5 -> AVG 24.11%
+STEP: 6 -> AVG 24.11%

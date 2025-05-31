@@ -1,0 +1,134 @@
+/home/smcho/temp/simulation/200_500_50_50
+mesh500_250*.txt when singleOnly is False
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_250_50_0.5_40.txt
+{'speed': 8, 'packetCount': (1498, 5371), 'accuracy': (497.12, 5.084, 492.036, 4.338)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_250_50_0.5_41.txt
+{'speed': 9, 'packetCount': (1498, 6290), 'accuracy': (499.754, 5.834, 493.92, 5.564)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_250_50_0.5_46.txt
+{'speed': 7, 'packetCount': (1498, 4868), 'accuracy': (499.71, 4.982, 494.728, 4.2)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_250_50_0.5_44.txt
+{'speed': 10, 'packetCount': (1498, 5951), 'accuracy': (498.992, 5.2, 493.792, 5.112)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_250_50_0.5_43.txt
+{'speed': 8, 'packetCount': (1498, 4882), 'accuracy': (499.338, 5.09, 494.248, 4.278)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_250_50_0.5_42.txt
+{'speed': 10, 'packetCount': (1498, 5184), 'accuracy': (497.732, 5.054, 492.678, 4.262)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_250_50_0.5_48.txt
+{'speed': 5, 'packetCount': (1498, 4305), 'accuracy': (499.634, 5.048, 494.586, 3.474)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_250_50_0.5_45.txt
+{'speed': 9, 'packetCount': (1498, 5624), 'accuracy': (499.732, 4.868, 494.864, 4.808)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_250_50_0.5_47.txt
+{'speed': 8, 'packetCount': (1498, 5972), 'accuracy': (499.966, 5.802, 494.164, 5.254)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_250_50_0.5_49.txt
+{'speed': 7, 'packetCount': (1498, 4830), 'accuracy': (499.4, 5.25, 494.15, 4.104)}
+smcho@ubucho:~/code/aggregator$ emacs massSimulate.py 
+smcho@ubucho:~/code/aggregator$ python massSimulate.py 
+/home/smcho/temp/simulation/200_500_50_50
+mesh500_500*.txt when singleOnly is False
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_375_0.5_30.txt
+{'speed': 5, 'packetCount': (1498, 4009), 'accuracy': (499.752, 4.992, 494.76, 3.432)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_75_0.5_9.txt
+{'speed': 5, 'packetCount': (1498, 4242), 'accuracy': (499.704, 4.976, 494.728, 3.516)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_18.txt
+{'speed': 5, 'packetCount': (1498, 4001), 'accuracy': (499.814, 5.018, 494.796, 3.436)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_375_0.5_33.txt
+{'speed': 5, 'packetCount': (1498, 3282), 'accuracy': (500.0, 4.892, 495.108, 2.914)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_375_0.5_34.txt
+{'speed': 5, 'packetCount': (1498, 3716), 'accuracy': (499.868, 5.024, 494.844, 3.23)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_75_0.5_5.txt
+{'speed': 5, 'packetCount': (1498, 4276), 'accuracy': (499.812, 4.95, 494.862, 3.574)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_75_0.5_3.txt
+{'speed': 7, 'packetCount': (1498, 5355), 'accuracy': (499.964, 5.674, 494.29, 4.488)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_75_0.5_1.txt
+
+/home/smcho/temp/simulation/200_500_50_50
+mesh500_500*.txt when singleOnly is False
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_25.txt
+{'speed': 5, 'packetCount': (1498, 4179), 'accuracy': (500.0, 5.14, 494.86, 3.328)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_23.txt
+{'speed': 5, 'packetCount': (1498, 3905), 'accuracy': (499.82, 5.11, 494.71, 3.45)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_28.txt
+{'speed': 5, 'packetCount': (1498, 3855), 'accuracy': (499.926, 5.006, 494.92, 3.26)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_17.txt
+{'speed': 5, 'packetCount': (1498, 3936), 'accuracy': (499.952, 5.074, 494.878, 3.36)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_15.txt
+{'speed': 7, 'packetCount': (1498, 4896), 'accuracy': (499.364, 5.164, 494.2, 4.128)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_19.txt
+{'speed': 5, 'packetCount': (1498, 3901), 'accuracy': (499.848, 5.086, 494.762, 3.294)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_375_0.5_37.txt
+{'speed': 4, 'packetCount': (1498, 2737), 'accuracy': (500.0, 5.012, 494.988, 2.45)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_12.txt
+{'speed': 5, 'packetCount': (1498, 3984), 'accuracy': (499.682, 5.036, 494.646, 3.376)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_75_0.5_0.txt
+{'speed': 5, 'packetCount': (1498, 4226), 'accuracy': (499.834, 5.066, 494.768, 3.522)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_22.txt
+{'speed': 7, 'packetCount': (1498, 4550), 'accuracy': (499.72, 5.116, 494.604, 3.794)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_11.txt
+{'speed': 5, 'packetCount': (1498, 4111), 'accuracy': (499.764, 5.038, 494.726, 3.438)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_20.txt
+{'speed': 5, 'packetCount': (1498, 4057), 'accuracy': (500.0, 5.004, 494.996, 3.472)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_21.txt
+
+
+mesh500_500*.txt when singleOnly is False
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_25.txt
+{'speed': 5, 'packetCount': (1498, 4179), 'accuracy': (500.0, 5.14, 494.86, 3.324)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_23.txt
+{'speed': 5, 'packetCount': (1498, 3905), 'accuracy': (499.82, 5.11, 494.71, 3.45)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_28.txt
+{'speed': 5, 'packetCount': (1498, 3855), 'accuracy': (499.926, 5.006, 494.92, 3.258)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_17.txt
+{'speed': 5, 'packetCount': (1498, 3940), 'accuracy': (499.952, 5.074, 494.878, 3.36)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_15.txt
+{'speed': 7, 'packetCount': (1498, 4891), 'accuracy': (499.364, 5.158, 494.206, 4.13)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_19.txt
+{'speed': 5, 'packetCount': (1498, 3901), 'accuracy': (499.848, 5.084, 494.764, 3.294)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_375_0.5_37.txt
+{'speed': 4, 'packetCount': (1498, 2737), 'accuracy': (500.0, 5.014, 494.986, 2.45)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_12.txt
+{'speed': 5, 'packetCount': (1498, 3985), 'accuracy': (499.682, 5.036, 494.646, 3.384)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_75_0.5_0.txt
+{'speed': 5, 'packetCount': (1498, 4226), 'accuracy': (499.834, 5.068, 494.766, 3.52)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_22.txt
+{'speed': 7, 'packetCount': (1498, 4556), 'accuracy': (499.72, 5.116, 494.604, 3.788)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_11.txt
+{'speed': 5, 'packetCount': (1498, 4115), 'accuracy': (499.764, 5.044, 494.72, 3.432)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_20.txt
+{'speed': 5, 'packetCount': (1498, 4058), 'accuracy': (500.0, 5.006, 494.994, 3.474)}
+
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_375_0.5_36.txt
+
+{'speed': 4, 'packetCount': (1498, 2745), 'accuracy': (500.0, 5.11, 494.89, 2.446)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_375_0.5_35.txt
+^[{'speed': 5, 'packetCount': (1498, 4147), 'accuracy': (499.752, 5.184, 494.568, 3.458)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_375_0.5_38.txt
+{'speed': 5, 'packetCount': (1498, 3337), 'accuracy': (500.0, 5.02, 494.98, 2.974)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_16.txt
+{'speed': 5, 'packetCount': (1498, 3904), 'accuracy': (500.0, 5.092, 494.908, 3.352)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_29.txt
+{'speed': 5, 'packetCount': (1498, 3536), 'accuracy': (499.898, 5.112, 494.786, 3.238)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_75_0.5_7.txt
+{'speed': 5, 'packetCount': (1498, 4162), 'accuracy': (499.65, 5.082, 494.568, 3.434)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_75_0.5_8.txt
+{'speed': 7, 'packetCount': (1498, 5413), 'accuracy': (499.97, 5.548, 494.422, 4.646)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_375_0.5_39.txt
+{'speed': 4, 'packetCount': (1498, 2742), 'accuracy': (500.0, 4.952, 495.048, 2.358)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_125_0.5_14.txt
+^[{'speed': 5, 'packetCount': (1498, 4001), 'accuracy': (499.882, 5.054, 494.828, 3.478)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_375_0.5_31.txt
+{'speed': 5, 'packetCount': (1498, 3817), 'accuracy': (499.966, 5.0, 494.966, 3.394)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_75_0.5_2.txt
+^[{'speed': 7, 'packetCount': (1498, 5305), 'accuracy': (499.956, 5.222, 494.734, 4.674)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_75_0.5_4.txt
+{'speed': 5, 'packetCount': (1498, 4102), 'accuracy': (499.926, 4.98, 494.946, 3.43)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_24.txt
+{'speed': 5, 'packetCount': (1498, 3812), 'accuracy': (499.862, 5.058, 494.804, 3.332)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_27.txt
+{'speed': 5, 'packetCount': (1498, 3893), 'accuracy': (500.0, 5.062, 494.938, 3.29)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_75_0.5_6.txt
+{'speed': 7, 'packetCount': (1498, 4798), 'accuracy': (499.504, 5.566, 493.938, 3.798)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_375_0.5_32.txt
+{'speed': 5, 'packetCount': (1498, 3597), 'accuracy': (499.986, 5.022, 494.964, 3.18)}
+Processing file - /home/smcho/temp/simulation/200_500_50_50/mesh500_500_250_0.5_26.txt
+{'speed': 5, 'packetCount': (1498, 3980), 'accuracy': (500.0, 5.036, 494.964, 3.304)}
+
+

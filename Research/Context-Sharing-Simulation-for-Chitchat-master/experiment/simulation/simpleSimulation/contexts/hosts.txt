@@ -1,0 +1,9 @@
+n:3
+group1:3
+group2:3
+group3:3
+default1:1000
+default2:2000
+default3:3000
+0:5000
+1:4000

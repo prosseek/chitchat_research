@@ -1,0 +1,51 @@
+1:38(38) -> (g(0):c(38))
+2:29(67) -> (g(29):c(0))
+3:27(94) -> (g(27):c(0))
+4:25(119) -> (g(25):c(0))
+5:23(142) -> (g(23):c(0))
+6:21(163) -> (g(21):c(0))
+7:19(182) -> (g(19):c(0))
+8:16(198) -> (g(16):c(0))
+9:13(211) -> (g(13):c(0))
+10:9(220) -> (g(9):c(0))
+11:6(226) -> (g(6):c(0))
+12:3(229) -> (g(3):c(0))
+Accuracy: total
+STEP: 1 -> AVG 14.50%
+STEP: 2 -> AVG 27.00%
+STEP: 3 -> AVG 40.50%
+STEP: 4 -> AVG 53.00%
+STEP: 5 -> AVG 64.00%
+STEP: 6 -> AVG 73.00%
+STEP: 7 -> AVG 81.50%
+STEP: 8 -> AVG 88.00%
+STEP: 9 -> AVG 93.50%
+STEP: 10 -> AVG 97.00%
+STEP: 11 -> AVG 99.00%
+STEP: 12 -> AVG 100.00%
+Accuracy: agg
+STEP: 1 -> AVG 14.50%
+STEP: 2 -> AVG 27.00%
+STEP: 3 -> AVG 40.50%
+STEP: 4 -> AVG 53.00%
+STEP: 5 -> AVG 64.00%
+STEP: 6 -> AVG 73.00%
+STEP: 7 -> AVG 81.50%
+STEP: 8 -> AVG 88.00%
+STEP: 9 -> AVG 93.50%
+STEP: 10 -> AVG 97.00%
+STEP: 11 -> AVG 99.00%
+STEP: 12 -> AVG 100.00%
+Accuracy: single
+STEP: 1 -> AVG 14.50%
+STEP: 2 -> AVG 16.50%
+STEP: 3 -> AVG 18.25%
+STEP: 4 -> AVG 20.00%
+STEP: 5 -> AVG 21.50%
+STEP: 6 -> AVG 23.25%
+STEP: 7 -> AVG 24.50%
+STEP: 8 -> AVG 26.00%
+STEP: 9 -> AVG 27.00%
+STEP: 10 -> AVG 28.00%
+STEP: 11 -> AVG 29.00%
+STEP: 12 -> AVG 29.50%

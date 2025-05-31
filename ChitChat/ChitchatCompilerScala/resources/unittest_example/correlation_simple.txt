@@ -1,0 +1,2 @@
+correlation location = (latitude, longitude)
+correlation bookseller = (name, location)

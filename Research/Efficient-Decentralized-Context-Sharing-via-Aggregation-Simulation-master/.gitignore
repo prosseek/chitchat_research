@@ -1,0 +1,27 @@
+*.py[cod]
+*.class
+*~
+
+.DS_Store
+
+# directories
+.idea/
+build/
+dist/
+*.egg-info/
+
+# Sphinx
+*/docs/sphinx/_build
+*/docs/sphinx/_static
+*/docs/sphinx/_template
+
+# Test temp
+aggregation_simulator/test/tmp/test1/aggregation/*
+aggregation_simulator/test/tmp/test1/singles_only/*
+aggregation_simulator/test/tmp/test_network1/aggregation/*
+aggregation_simulator/test/tmp/test_network1/singles_only/*
+aggregation_simulator/test/tmp/real_world_intel_6/singles_only/*
+aggregation_simulator/test/tmp/real_world_intel_6/aggregation/*
+aggregation_simulator/test/tmp/real_world_intel_10/singles_only/*
+aggregation_simulator/test/tmp/real_world_intel_10/aggregation/*
+test_files/backup/*
